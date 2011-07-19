@@ -1,0 +1,62 @@
+\documentclass[10pt,twoside]{article}
+\usepackage[a5paper]{geometry}
+
+% XeTeX packages
+\usepackage[cm-default,no-math]{fontspec} 
+\usepackage{xunicode} % some extra unicode support
+\usepackage{xltxtra} % \XeLaTeX macro
+
+\tolerance=1000
+\emergencystretch=0.74cm
+ 
+
+
+% Polyglossia
+\usepackage{polyglossia}
+\setdefaultlanguage{russian}
+\setotherlanguage{english}
+\newfontfamily\russianfont[Mapping=tex-text]{Times New Roman}
+ 
+% Default fonts
+\defaultfontfeatures{Scale=MatchLowercase}
+\defaultfontfeatures{Mapping=tex-text}
+\setromanfont{Times New Roman}
+\setsansfont{Arial}
+\setmonofont{Lucida Console}
+\setmainfont{Times New Roman}
+
+\usepackage[pdftitle={Intoduction in Molecular Optics},
+pdfauthor={Kirill Panshin},
+pdfsubject={Molecular Optics Textbook},
+pdfkeywords={molecular optics, scattering},
+pdfa=true,
+colorlinks=true,
+xetex]{hyperref}
+
+\XeTeXinterchartokenstate=1
+\XeTeXcharclass `\- 24
+\XeTeXinterchartoks 24 0 = {\hskip\z@skip}
+\XeTeXinterchartoks 0 24 = {\nobreak}
+
+
+\usepackage{met1}
+\usepackage{plain}
+
+\begin{document}
+
+
+
+\input macro1.tex
+\input pMacro.tex
+
+\pagestyle{myheadings}
+\input titul.tex
+\input glv01.tex
+\input glv02.tex
+\zagn 2\input glv03.tex
+\zagn3\input glv04.tex
+%\zagn4\zagpn4\input glv_flygare.tex
+%\zagn4\zagpn4\input flygare_exp.tex
+%\zagn4\input glv05.tex
+%\input glv05_slit.tex
+\end{document}

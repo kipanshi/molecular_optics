@@ -1,0 +1,65 @@
+\ifx\numpoint\undefined \catcode`\@=9 \else  \catcode`\@=14  \fi
+@  \global\newcount\numpoint  \global\numpoint=1
+\ifx\numpointo\undefined \catcode`\@=9 \else  \catcode`\@=14  \fi
+@  \global\newcount\numpointo  \global\numpointo=1
+\ifx\mydimx\undefined \catcode`\@=9 \else  \catcode`\@=14  \fi
+@  \newdimen\mydimx
+\ifx\mydimy\undefined \catcode`\@=9 \else  \catcode`\@=14  \fi
+@  \newdimen\mydimy
+\catcode`\@=12
+\def\emmoveto#1#2{\offinterlineskip \hbox to 0 true cm{\vbox to 0
+true cm{\multiply \mydimx by #1 \multiply \mydimy by #2
+\vskip -\mydimy \hskip\mydimx \special{em:point \the\numpoint}\vss}\hss}
+\numpointo=\numpoint \global\advance \numpoint by 1
+\ifnum\numpoint>32760 \global \numpoint 1 \fi
+}
+\def\emlineto#1#2{\offinterlineskip \hbox to 0 true cm{\vbox to 0
+true cm{\multiply \mydimx by #1 \multiply \mydimy by #2
+\vskip -\mydimy \hskip \mydimx  \special{em:point \the\numpoint}\vss}\hss}
+\special{em:line \the\numpointo,\the\numpoint}
+\numpointo=\numpoint  \global\advance \numpoint by 1
+\ifnum\numpoint>32760 \global \numpoint 1 \fi
+}
+\def\emshowto#1#2#3{\offinterlineskip \hbox to 0 true cm{\vbox to 0
+true cm{\multiply \mydimx by #1 \multiply \mydimy by #2
+\vskip - \mydimy \hskip \mydimx \vbox to 0 true cm{\vss\hbox{#3\hss
+}}\vss}\hss
+}}    
+
+%  -------- End of Header ------------ 
+
+\special{em:linewidth 0.8pt}  
+
+\mydimx=0.100000 true mm        \mydimy=0.100000 true mm 
+\vrule width 0 mm height 0 mm depth 12 true mm 
+
+{
+\parindent 0 mm
+
+\emmoveto{100}{60}
+\emlineto{160}{60}
+\emmoveto{100}{60}
+\emlineto{110}{70}
+\emmoveto{100}{60}
+\emlineto{110}{50}
+\emmoveto{220}{60}
+\emlineto{280}{60}
+\emmoveto{220}{50}
+\emlineto{280}{50}
+\emshowto{120}{60}{$\cdot$}
+\emshowto{130}{60}{$\cdot$}
+\emshowto{140}{60}{$\cdot$}
+\emshowto{150}{60}{$\cdot$}
+\emshowto{220}{60}{$\cdot$}
+\emshowto{230}{60}{$\cdot$}
+\emshowto{240}{60}{$\cdot$}
+\emshowto{250}{60}{$\cdot$}
+\emshowto{260}{60}{$\cdot$}
+\emshowto{270}{60}{$\cdot$}
+\emshowto{50}{50}{Br}
+\emshowto{180}{50}{C}
+\emshowto{300}{50}{$\rm C-H$}
+\emshowto{110}{60}{$\cdot$}
+
+}
+

@@ -1,0 +1,98 @@
+% Это стилевой файл для методических пособий
+% Copyright Panshin Kirill
+
+% Макет полосы набора
+
+\setlength{\paperheight}{210 true mm}
+
+\setlength{\paperwidth}{148 true mm}
+
+\setlength{\oddsidemargin}{-2,60mm}
+\setlength{\evensidemargin}{2,73mm} \setlength{\marginparwidth}{0in}
+\setlength{\marginparsep}{0pt}
+
+\setlength{\topmargin}{-15pt} \setlength{\headheight}{10pt}
+\setlength{\headsep}{15pt} \setlength{\topskip}{10pt}
+
+\setlength{\footskip}{36pt}
+
+%\setlength{\textwidth}{\paperwidth} \addtolength{\textwidth}{-33,5
+%mm}
+\setlength{\textwidth}{115 mm} \setlength{\textheight}{\paperheight}
+\addtolength{\textheight}{-40 mm}
+
+\hoffset -8,7mm \voffset -8mm
+
+% \columnseprule 0,5 % Ширина промежутка между колонками
+
+% \setlength{\columnwidth}{\textwidth} % Ширина одной колонки при
+% многоколонном режиме.
+% Подходящий размер вычисляется LaTeX'ом из \textwidth и \coloumnsep
+
+% \setlength{\linewidth}{\columnwidth} - Длина строки текущего текста.
+
+% \setlength{\evensidemargin}%
+% {-2 true mm} % При двухсторонней печати интервал добавляемый слева для четных страниц
+
+% \setlength{\oddsidemargin}%
+% {2 true mm} % То же для нечетных
+
+%\footskip % Интервал, отделяющий базовую линию последней строки от базовой линии нижнего колонтитула
+
+%\headheight %  Высота верхнего колонтитула
+
+%\headsep % Вертикальный разделитель между верхним колонтитулом и телом текста
+
+%\topmargin % Дополнительный интервал, добавляемый над верхним колонтитулом
+
+%\marginparpush % Мин. вертикальный интервал между двумя последовательными заметками на полях
+
+%\marginparsep %Горизонтальный интервал между телом текста и заметками на полях
+
+% \setlength{\marginparwidth}{0 mm} % Ширина заметок на полях
+
+%  ********************   % Нумерация страниц и определение колонтитулов
+%% левый нижний
+\countdef\pageno=0 \pageno=3
+
+\def\@evenfoot{\hbox
+to\textwidth{\raise
+3mm\hbox{\small\thepage}\hss}}
+
+% правый нижний
+\def\@oddfoot{\hbox to
+\textwidth{\hss\raise
+3mm\hbox{\small\thepage}}}
+
+%Счетчики заголовков
+
+%\renewcommand{\thechapter}{Глава\ \arabic{chapter}.}
+%\def\last{}
+%\def\shorttitle#1{\@@name[#1]}
+%\def\sq{\raisebox{0,2pt}{\vrule width5pt height5pt}}
+%\newcounter{article}\setcounter{article}{0}
+%\@addtoreset{figure}{article} \@addtoreset{section}{article}
+%\@addtoreset{equation}{section}
+%\@addtoreset{equation}{equation}
+%\def\thesection       {{ГЛАВА}~\arabic{section}.}
+%\def\thesection       {\arabic{section}.}
+%\def\thesubsection    {\thesection\arabic{subsection}.}
+%\def\thesubsection    {\arabic{section}.\arabic{subsection}.}
+%\def\thesubsubsection {\thesubsection\arabic{subsubsection}.}
+%\def\theparagraph     {\thesubsubsection\arabic{paragraph}.}
+%\def\thesubparagraph  {\theparagraph\arabic{subparagraph}.}
+%\def\theequation{\arabic{section}.\arabic{equation}}
+
+%\def\contentsname  {Cодержание}
+%\def\bibname       {Литература}
+%\def\bibname       {Библиографический список}
+%\def\figurename    {Рис.}
+%\def\tablename     {Таблица}
+
+% Абзацный отступ
+
+%\setlength{\parindent}{7mm}
+%\newcommand{\nohyph}{\hyphenpenalty=10000\exhyphenpenalty=10000\relax}
+
+% Определение макросов
+

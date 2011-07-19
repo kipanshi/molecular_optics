@@ -1,0 +1,265 @@
+\ifx\numpoint\undefined \catcode`\@=9 \else  \catcode`\@=14  \fi
+@  \global\newcount\numpoint  \global\numpoint=1
+\ifx\numpointo\undefined \catcode`\@=9 \else  \catcode`\@=14  \fi
+@  \global\newcount\numpointo  \global\numpointo=1
+\ifx\mydimx\undefined \catcode`\@=9 \else  \catcode`\@=14  \fi
+@  \newdimen\mydimx
+\ifx\mydimy\undefined \catcode`\@=9 \else  \catcode`\@=14  \fi
+@  \newdimen\mydimy
+\catcode`\@=12
+\def\emmoveto#1#2{\offinterlineskip \hbox to 0 true cm{\vbox to 0
+true cm{\multiply \mydimx by #1 \multiply \mydimy by #2
+\vskip -\mydimy \hskip\mydimx \special{em:point \the\numpoint}\vss}\hss}
+\numpointo=\numpoint \global\advance \numpoint by 1
+\ifnum\numpoint>32760 \global \numpoint 1 \fi
+}
+\def\emlineto#1#2{\offinterlineskip \hbox to 0 true cm{\vbox to 0
+true cm{\multiply \mydimx by #1 \multiply \mydimy by #2
+\vskip -\mydimy \hskip \mydimx  \special{em:point \the\numpoint}\vss}\hss}
+\special{em:line \the\numpointo,\the\numpoint}
+\numpointo=\numpoint  \global\advance \numpoint by 1
+\ifnum\numpoint>32760 \global \numpoint 1 \fi
+}
+\def\emshowto#1#2#3{\offinterlineskip \hbox to 0 true cm{\vbox to 0
+true cm{\multiply \mydimx by #1 \multiply \mydimy by #2
+\vskip - \mydimy \hskip \mydimx \vbox to 0 true cm{\vss\hbox{#3\hss
+}}\vss}\hss
+}}    
+
+%  -------- End of Header ------------ 
+
+\special{em:linewidth 0.8pt}  
+
+\mydimx=0.100000 true mm        \mydimy=0.100000 true mm 
+\vrule width 0 mm height 0 mm depth 79 true mm 
+
+{
+\parindent 0 mm
+
+\emmoveto{350}{80}
+\emlineto{930}{80}
+\emmoveto{350}{740}
+\emlineto{350}{80}
+\emmoveto{350}{180}
+\emlineto{360}{180}
+\emmoveto{350}{280}
+\emlineto{360}{280}
+\emmoveto{350}{380}
+\emlineto{360}{380}
+\emmoveto{350}{480}
+\emlineto{360}{480}
+\emmoveto{350}{580}
+\emlineto{360}{580}
+\emmoveto{350}{680}
+\emlineto{360}{680}
+\emmoveto{480}{80}
+\emlineto{480}{90}
+\emmoveto{610}{80}
+\emlineto{610}{90}
+\emmoveto{740}{80}
+\emlineto{740}{90}
+\emmoveto{870}{80}
+\emlineto{870}{90}
+\emmoveto{650}{80}
+\emlineto{650}{100}
+\emmoveto{650}{110}
+\emlineto{650}{130}
+\emmoveto{650}{140}
+\emlineto{650}{160}
+\emmoveto{650}{170}
+\emlineto{650}{190}
+\emmoveto{650}{200}
+\emlineto{650}{220}
+\emmoveto{650}{230}
+\emlineto{650}{250}
+\emmoveto{650}{260}
+\emlineto{650}{280}
+\emmoveto{650}{290}
+\emlineto{650}{310}
+\emmoveto{650}{320}
+\emlineto{650}{340}
+\emmoveto{650}{350}
+\emlineto{650}{370}
+\emmoveto{650}{380}
+\emlineto{650}{400}
+\emmoveto{650}{410}
+\emlineto{650}{430}
+\emmoveto{650}{440}
+\emlineto{650}{460}
+\emmoveto{650}{470}
+\emlineto{650}{490}
+\emmoveto{650}{500}
+\emlineto{650}{520}
+\emmoveto{650}{530}
+\emlineto{650}{550}
+\emmoveto{650}{560}
+\emlineto{650}{580}
+\emmoveto{650}{590}
+\emlineto{650}{610}
+\emmoveto{350}{600}
+\emlineto{370}{600}
+\emmoveto{380}{600}
+\emlineto{400}{600}
+\emmoveto{410}{600}
+\emlineto{430}{600}
+\emmoveto{440}{600}
+\emlineto{460}{600}
+\emmoveto{470}{600}
+\emlineto{490}{600}
+\emmoveto{500}{600}
+\emlineto{520}{600}
+\emmoveto{530}{600}
+\emlineto{550}{600}
+\emmoveto{560}{600}
+\emlineto{580}{600}
+\emmoveto{590}{600}
+\emlineto{610}{600}
+\emmoveto{620}{600}
+\emlineto{640}{600}
+\emmoveto{650}{600}
+\emlineto{670}{600}
+\emmoveto{680}{600}
+\emlineto{700}{600}
+\emmoveto{650}{620}
+\emlineto{650}{640}
+\emmoveto{350}{600}
+\emlineto{358}{599}
+\emlineto{367}{599}
+\emlineto{376}{599}
+\emlineto{384}{599}
+\emlineto{393}{599}
+\emlineto{402}{599}
+\emlineto{410}{598}
+\emlineto{419}{598}
+\emlineto{427}{597}
+\emlineto{436}{596}
+\emlineto{445}{596}
+\emlineto{453}{594}
+\emlineto{462}{593}
+\emlineto{470}{591}
+\emlineto{479}{590}
+\emlineto{488}{588}
+\emlineto{496}{585}
+\emlineto{504}{583}
+\emlineto{513}{580}
+\emlineto{521}{577}
+\emlineto{529}{573}
+\emlineto{537}{569}
+\emlineto{545}{565}
+\emlineto{552}{561}
+\emlineto{559}{556}
+\emlineto{566}{551}
+\emlineto{573}{546}
+\emlineto{579}{540}
+\emlineto{585}{534}
+\emlineto{590}{528}
+\emlineto{595}{521}
+\emlineto{600}{514}
+\emlineto{604}{507}
+\emlineto{609}{500}
+\emlineto{613}{492}
+\emlineto{616}{484}
+\emlineto{620}{476}
+\emlineto{623}{467}
+\emlineto{626}{459}
+\emlineto{628}{450}
+\emlineto{631}{441}
+\emlineto{634}{432}
+\emlineto{636}{423}
+\emlineto{638}{414}
+\emlineto{640}{405}
+\emlineto{642}{396}
+\emlineto{644}{387}
+\emlineto{646}{377}
+\emlineto{648}{368}
+\emlineto{650}{359}
+\emlineto{652}{349}
+\emlineto{653}{340}
+\emlineto{655}{331}
+\emlineto{657}{322}
+\emlineto{659}{313}
+\emlineto{661}{304}
+\emlineto{664}{295}
+\emlineto{666}{286}
+\emlineto{668}{278}
+\emlineto{671}{269}
+\emlineto{674}{261}
+\emlineto{676}{253}
+\emlineto{680}{244}
+\emlineto{683}{236}
+\emlineto{686}{228}
+\emlineto{690}{221}
+\emlineto{694}{213}
+\emlineto{698}{206}
+\emlineto{703}{199}
+\emlineto{708}{192}
+\emlineto{713}{185}
+\emlineto{719}{178}
+\emlineto{724}{172}
+\emlineto{730}{166}
+\emlineto{737}{160}
+\emlineto{743}{154}
+\emlineto{750}{149}
+\emlineto{757}{144}
+\emlineto{764}{139}
+\emlineto{772}{134}
+\emlineto{779}{130}
+\emlineto{787}{126}
+\emlineto{795}{122}
+\emlineto{803}{118}
+\emlineto{811}{115}
+\emlineto{819}{112}
+\emlineto{827}{109}
+\emlineto{835}{107}
+\emlineto{843}{105}
+\emlineto{852}{103}
+\emlineto{860}{101}
+\emlineto{869}{99}
+\emlineto{877}{97}
+\emlineto{886}{96}
+\emlineto{895}{94}
+\emlineto{903}{93}
+\emlineto{912}{92}
+\emlineto{921}{91}
+\emlineto{930}{90}
+\emmoveto{930}{80}
+\emlineto{900}{90}
+\emmoveto{930}{80}
+\emlineto{900}{70}
+\emmoveto{350}{740}
+\emlineto{360}{710}
+\emmoveto{350}{740}
+\emlineto{340}{710}
+\emmoveto{420}{550}
+\emlineto{450}{580}
+\emmoveto{450}{580}
+\emlineto{440}{560}
+\emmoveto{450}{580}
+\emlineto{430}{570}
+\emshowto{400}{520}{$\nu_s\rightarrow0$}
+\emshowto{530}{690}{$({\gamma\over\nu_s^2})$=}
+\emshowto{680}{690}{$)=52\times10^{-16}$}
+\emshowto{910}{690}{$\rm см^{-1}\cdot с^2$}
+\emshowto{90}{460}{{\it Поглощение}}
+\emshowto{50}{420}{${\gamma\over\nu_s^2}$}
+\emshowto{80}{420}{$\rm (10^{-17}см^{-1}$}
+\emshowto{320}{70}{0}
+\emshowto{350}{50}{$10^7$}
+\emshowto{470}{50}{$10^8$}
+\emshowto{600}{50}{$10^9$}
+\emshowto{720}{50}{$10^{10}$}
+\emshowto{840}{50}{$10^{11}$}
+\emshowto{950}{50}{$\nu_s$}
+\emshowto{630}{690}{$({\gamma_0\over\nu_s^2}$}
+\emshowto{290}{170}{100}
+\emshowto{260}{420}{$\cdot\rm с^2)$}
+\emshowto{290}{270}{200}
+\emshowto{290}{370}{300}
+\emshowto{290}{470}{400}
+\emshowto{290}{570}{500}
+\emshowto{290}{670}{600}
+\emshowto{730}{460}{$\nu_{\tau}=2,4$ ГГц}
+\emshowto{730}{420}{$\flrd$}
+
+}
+

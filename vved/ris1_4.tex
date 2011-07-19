@@ -1,0 +1,97 @@
+\ifx\numpoint\undefined \catcode`\@=9 \else  \catcode`\@=14  \fi
+@  \global\newcount\numpoint  \global\numpoint=1
+\ifx\numpointo\undefined \catcode`\@=9 \else  \catcode`\@=14  \fi
+@  \global\newcount\numpointo  \global\numpointo=1
+\ifx\mydimx\undefined \catcode`\@=9 \else  \catcode`\@=14  \fi
+@  \newdimen\mydimx
+\ifx\mydimy\undefined \catcode`\@=9 \else  \catcode`\@=14  \fi
+@  \newdimen\mydimy
+\catcode`\@=12
+\def\emmoveto#1#2{\offinterlineskip \hbox to 0 true cm{\vbox to 0
+true cm{\multiply \mydimx by #1 \multiply \mydimy by #2
+\vskip -\mydimy \hskip\mydimx \special{em:point \the\numpoint}\vss}\hss}
+\numpointo=\numpoint \global\advance \numpoint by 1
+\ifnum\numpoint>32760 \global \numpoint 1 \fi
+}
+\def\emlineto#1#2{\offinterlineskip \hbox to 0 true cm{\vbox to 0
+true cm{\multiply \mydimx by #1 \multiply \mydimy by #2
+\vskip -\mydimy \hskip \mydimx  \special{em:point \the\numpoint}\vss}\hss}
+\special{em:line \the\numpointo,\the\numpoint}
+\numpointo=\numpoint  \global\advance \numpoint by 1
+\ifnum\numpoint>32760 \global \numpoint 1 \fi
+}
+\def\emshowto#1#2#3{\offinterlineskip \hbox to 0 true cm{\vbox to 0
+true cm{\multiply \mydimx by #1 \multiply \mydimy by #2
+\vskip - \mydimy \hskip \mydimx \vbox to 0 true cm{\vss\hbox{#3\hss
+}}\vss}\hss
+}}    
+
+%  -------- End of Header ------------ 
+
+\special{em:linewidth 0.8pt}  
+
+\mydimx=0.100000 true mm        \mydimy=0.100000 true mm 
+\vrule width 0 mm height 0 mm depth 56 true mm 
+
+{
+\parindent 0 mm
+
+\emmoveto{230}{490}
+\emlineto{230}{260}
+\emmoveto{230}{260}
+\emlineto{50}{80}
+\emmoveto{230}{260}
+\emlineto{580}{260}
+\emmoveto{230}{260}
+\emlineto{350}{320}
+\emmoveto{390}{420}
+\emlineto{390}{510}
+\emmoveto{390}{420}
+\emlineto{310}{380}
+\emmoveto{390}{420}
+\emlineto{490}{390}
+\emmoveto{390}{420}
+\emlineto{450}{450}
+\emmoveto{350}{320}
+\emlineto{340}{300}
+\emmoveto{350}{320}
+\emlineto{330}{320}
+\emmoveto{50}{80}
+\emlineto{70}{90}
+\emmoveto{50}{80}
+\emlineto{60}{100}
+\emmoveto{230}{490}
+\emlineto{220}{470}
+\emmoveto{230}{490}
+\emlineto{240}{470}
+\emmoveto{580}{260}
+\emlineto{560}{250}
+\emmoveto{580}{260}
+\emlineto{560}{270}
+\emmoveto{310}{380}
+\emlineto{330}{380}
+\emmoveto{310}{380}
+\emlineto{320}{400}
+\emmoveto{390}{510}
+\emlineto{380}{490}
+\emmoveto{390}{510}
+\emlineto{400}{490}
+\emmoveto{490}{390}
+\emlineto{470}{380}
+\emmoveto{490}{390}
+\emlineto{480}{410}
+\emmoveto{450}{450}
+\emlineto{430}{450}
+\emmoveto{450}{450}
+\emlineto{440}{430}
+\emshowto{580}{280}{$x$}
+\emshowto{80}{50}{$y$}
+\emshowto{190}{480}{$z$}
+\emshowto{370}{310}{$\vec E$}
+\emshowto{290}{410}{2}
+\emshowto{500}{410}{1}
+\emshowto{420}{510}{3}
+\emshowto{470}{450}{$\vec p$}
+
+}
+

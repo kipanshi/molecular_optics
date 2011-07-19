@@ -1,0 +1,75 @@
+\ifx\numpoint\undefined \catcode`\@=9 \else  \catcode`\@=14  \fi
+@  \global\newcount\numpoint  \global\numpoint=1
+\ifx\numpointo\undefined \catcode`\@=9 \else  \catcode`\@=14  \fi
+@  \global\newcount\numpointo  \global\numpointo=1
+\ifx\mydimx\undefined \catcode`\@=9 \else  \catcode`\@=14  \fi
+@  \newdimen\mydimx
+\ifx\mydimy\undefined \catcode`\@=9 \else  \catcode`\@=14  \fi
+@  \newdimen\mydimy
+\catcode`\@=12
+\def\emmoveto#1#2{\offinterlineskip \hbox to 0 true cm{\vbox to 0
+true cm{\multiply \mydimx by #1 \multiply \mydimy by #2
+\vskip -\mydimy \hskip\mydimx \special{em:point \the\numpoint}\vss}\hss}
+\numpointo=\numpoint \global\advance \numpoint by 1
+\ifnum\numpoint>32760 \global \numpoint 1 \fi
+}
+\def\emlineto#1#2{\offinterlineskip \hbox to 0 true cm{\vbox to 0
+true cm{\multiply \mydimx by #1 \multiply \mydimy by #2
+\vskip -\mydimy \hskip \mydimx  \special{em:point \the\numpoint}\vss}\hss}
+\special{em:line \the\numpointo,\the\numpoint}
+\numpointo=\numpoint  \global\advance \numpoint by 1
+\ifnum\numpoint>32760 \global \numpoint 1 \fi
+}
+\def\emshowto#1#2#3{\offinterlineskip \hbox to 0 true cm{\vbox to 0
+true cm{\multiply \mydimx by #1 \multiply \mydimy by #2
+\vskip - \mydimy \hskip \mydimx \vbox to 0 true cm{\vss\hbox{#3\hss
+}}\vss}\hss
+}}    
+
+%  -------- End of Header ------------ 
+
+\special{em:linewidth 0.8pt}  
+
+\mydimx=0.100000 true mm        \mydimy=0.100000 true mm 
+\vrule width 0 mm height 0 mm depth 28 true mm 
+
+{
+\parindent 0 mm
+
+\emmoveto{120}{150}
+\emlineto{160}{150}
+\emmoveto{220}{150}
+\emlineto{260}{150}
+\emmoveto{190}{180}
+\emlineto{190}{220}
+\emmoveto{190}{120}
+\emlineto{190}{80}
+\emmoveto{530}{150}
+\emlineto{570}{150}
+\emmoveto{630}{150}
+\emlineto{670}{150}
+\emmoveto{600}{180}
+\emlineto{600}{220}
+\emmoveto{600}{120}
+\emlineto{600}{80}
+\emmoveto{530}{150}
+\emlineto{550}{160}
+\emmoveto{530}{150}
+\emlineto{550}{140}
+\emmoveto{630}{150}
+\emlineto{650}{160}
+\emmoveto{630}{150}
+\emlineto{650}{140}
+\emshowto{50}{140}{$\rm H_3C$}
+\emshowto{270}{140}{OH,}
+\emshowto{180}{230}{$\rm CH_3$}
+\emshowto{180}{50}{$\rm CH_3$}
+\emshowto{180}{140}{C}
+\emshowto{460}{140}{$\rm F_3C$}
+\emshowto{680}{140}{OH.}
+\emshowto{590}{140}{C}
+\emshowto{590}{230}{$\rm CH_3$}
+\emshowto{590}{50}{$\rm CH_3$}
+
+}
+

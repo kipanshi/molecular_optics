@@ -1,0 +1,163 @@
+\ifx\numpoint\undefined \catcode`\@=9 \else  \catcode`\@=14  \fi
+@  \global\newcount\numpoint  \global\numpoint=1
+\ifx\numpointo\undefined \catcode`\@=9 \else  \catcode`\@=14  \fi
+@  \global\newcount\numpointo  \global\numpointo=1
+\ifx\mydimx\undefined \catcode`\@=9 \else  \catcode`\@=14  \fi
+@  \newdimen\mydimx
+\ifx\mydimy\undefined \catcode`\@=9 \else  \catcode`\@=14  \fi
+@  \newdimen\mydimy
+\catcode`\@=12
+\def\emmoveto#1#2{\offinterlineskip \hbox to 0 true cm{\vbox to 0
+true cm{\multiply \mydimx by #1 \multiply \mydimy by #2
+\vskip -\mydimy \hskip\mydimx \special{em:point \the\numpoint}\vss}\hss}
+\numpointo=\numpoint \global\advance \numpoint by 1
+\ifnum\numpoint>32760 \global \numpoint 1 \fi
+}
+\def\emlineto#1#2{\offinterlineskip \hbox to 0 true cm{\vbox to 0
+true cm{\multiply \mydimx by #1 \multiply \mydimy by #2
+\vskip -\mydimy \hskip \mydimx  \special{em:point \the\numpoint}\vss}\hss}
+\special{em:line \the\numpointo,\the\numpoint}
+\numpointo=\numpoint  \global\advance \numpoint by 1
+\ifnum\numpoint>32760 \global \numpoint 1 \fi
+}
+\def\emshowto#1#2#3{\offinterlineskip \hbox to 0 true cm{\vbox to 0
+true cm{\multiply \mydimx by #1 \multiply \mydimy by #2
+\vskip - \mydimy \hskip \mydimx \vbox to 0 true cm{\vss\hbox{#3\hss
+}}\vss}\hss
+}}    
+
+%  -------- End of Header ------------ 
+
+\special{em:linewidth 0.8pt}  
+
+\mydimx=0.100000 true mm        \mydimy=0.100000 true mm 
+\vrule width 0 mm height 0 mm depth 47 true mm 
+
+{
+\parindent 0 mm
+
+\emmoveto{130}{420}
+\emlineto{130}{50}
+\emmoveto{110}{190}
+\emlineto{530}{190}
+\emmoveto{180}{410}
+\emlineto{180}{404}
+\emlineto{180}{399}
+\emlineto{181}{393}
+\emlineto{181}{388}
+\emlineto{182}{382}
+\emlineto{182}{377}
+\emlineto{183}{371}
+\emlineto{184}{366}
+\emlineto{184}{360}
+\emlineto{185}{355}
+\emlineto{185}{349}
+\emlineto{186}{343}
+\emlineto{186}{338}
+\emlineto{187}{332}
+\emlineto{188}{326}
+\emlineto{188}{320}
+\emlineto{189}{314}
+\emlineto{190}{309}
+\emlineto{191}{303}
+\emlineto{191}{296}
+\emlineto{192}{290}
+\emlineto{193}{284}
+\emlineto{194}{278}
+\emlineto{195}{272}
+\emlineto{196}{265}
+\emlineto{197}{259}
+\emlineto{198}{252}
+\emlineto{199}{245}
+\emlineto{200}{239}
+\emlineto{201}{232}
+\emlineto{203}{225}
+\emlineto{204}{218}
+\emlineto{205}{210}
+\emlineto{207}{203}
+\emlineto{208}{196}
+\emlineto{210}{188}
+\emlineto{211}{181}
+\emlineto{213}{173}
+\emlineto{215}{165}
+\emlineto{217}{157}
+\emlineto{218}{150}
+\emlineto{220}{142}
+\emlineto{222}{134}
+\emlineto{224}{127}
+\emlineto{227}{120}
+\emlineto{229}{113}
+\emlineto{231}{106}
+\emlineto{234}{100}
+\emlineto{236}{94}
+\emlineto{239}{88}
+\emlineto{242}{83}
+\emlineto{244}{78}
+\emlineto{247}{73}
+\emlineto{251}{70}
+\emlineto{254}{66}
+\emlineto{257}{64}
+\emlineto{260}{62}
+\emlineto{264}{60}
+\emlineto{268}{60}
+\emlineto{272}{60}
+\emlineto{275}{60}
+\emlineto{280}{62}
+\emlineto{284}{64}
+\emlineto{288}{67}
+\emlineto{292}{70}
+\emlineto{297}{73}
+\emlineto{302}{77}
+\emlineto{306}{81}
+\emlineto{311}{86}
+\emlineto{316}{90}
+\emlineto{321}{95}
+\emlineto{326}{100}
+\emlineto{331}{104}
+\emlineto{336}{109}
+\emlineto{342}{113}
+\emlineto{347}{118}
+\emlineto{352}{122}
+\emlineto{358}{125}
+\emlineto{363}{129}
+\emlineto{369}{132}
+\emlineto{374}{135}
+\emlineto{380}{138}
+\emlineto{386}{140}
+\emlineto{391}{142}
+\emlineto{397}{144}
+\emlineto{403}{146}
+\emlineto{409}{148}
+\emlineto{414}{149}
+\emlineto{420}{151}
+\emlineto{426}{152}
+\emlineto{432}{153}
+\emlineto{438}{154}
+\emlineto{444}{155}
+\emlineto{450}{156}
+\emlineto{456}{157}
+\emlineto{462}{157}
+\emlineto{468}{158}
+\emlineto{474}{159}
+\emlineto{480}{160}
+\emmoveto{270}{60}
+\emlineto{270}{190}
+\emmoveto{270}{60}
+\emlineto{280}{90}
+\emmoveto{260}{90}
+\emlineto{270}{60}
+\emmoveto{130}{420}
+\emlineto{140}{400}
+\emmoveto{130}{420}
+\emlineto{120}{400}
+\emmoveto{530}{190}
+\emlineto{510}{200}
+\emmoveto{530}{190}
+\emlineto{510}{180}
+\emshowto{50}{400}{$\varphi(r)$}
+\emshowto{160}{130}{$\sigma$}
+\emshowto{280}{130}{$\varepsilon$}
+\emshowto{530}{160}{$r$}
+
+}
+

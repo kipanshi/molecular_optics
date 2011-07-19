@@ -1,0 +1,170 @@
+\ifx\numpoint\undefined \catcode`\@=9 \else  \catcode`\@=14  \fi
+@  \global\newcount\numpoint  \global\numpoint=1
+\ifx\numpointo\undefined \catcode`\@=9 \else  \catcode`\@=14  \fi
+@  \global\newcount\numpointo  \global\numpointo=1
+\ifx\mydimx\undefined \catcode`\@=9 \else  \catcode`\@=14  \fi
+@  \newdimen\mydimx
+\ifx\mydimy\undefined \catcode`\@=9 \else  \catcode`\@=14  \fi
+@  \newdimen\mydimy
+\catcode`\@=12
+\def\emmoveto#1#2{\offinterlineskip \hbox to 0 true cm{\vbox to 0
+true cm{\multiply \mydimx by #1 \multiply \mydimy by #2
+\vskip -\mydimy \hskip\mydimx \special{em:point \the\numpoint}\vss}\hss}
+\numpointo=\numpoint \global\advance \numpoint by 1
+\ifnum\numpoint>32760 \global \numpoint 1 \fi
+}
+\def\emlineto#1#2{\offinterlineskip \hbox to 0 true cm{\vbox to 0
+true cm{\multiply \mydimx by #1 \multiply \mydimy by #2
+\vskip -\mydimy \hskip \mydimx  \special{em:point \the\numpoint}\vss}\hss}
+\special{em:line \the\numpointo,\the\numpoint}
+\numpointo=\numpoint  \global\advance \numpoint by 1
+\ifnum\numpoint>32760 \global \numpoint 1 \fi
+}
+\def\emshowto#1#2#3{\offinterlineskip \hbox to 0 true cm{\vbox to 0
+true cm{\multiply \mydimx by #1 \multiply \mydimy by #2
+\vskip - \mydimy \hskip \mydimx \vbox to 0 true cm{\vss\hbox{#3\hss
+}}\vss}\hss
+}}    
+
+%  -------- End of Header ------------ 
+
+\special{em:linewidth 0.8pt}  
+
+\mydimx=0.100000 true mm        \mydimy=0.100000 true mm 
+\vrule width 0 mm height 0 mm depth 47 true mm 
+
+{
+\parindent 0 mm
+
+\emmoveto{110}{420}
+\emlineto{110}{110}
+\emmoveto{110}{110}
+\emlineto{630}{110}
+\emmoveto{220}{200}
+\emlineto{520}{200}
+\emmoveto{220}{270}
+\emlineto{490}{360}
+\emmoveto{230}{280}
+\emlineto{180}{280}
+\emmoveto{270}{280}
+\emlineto{320}{280}
+\emmoveto{360}{280}
+\emlineto{410}{280}
+\emmoveto{450}{280}
+\emlineto{500}{280}
+\emmoveto{110}{420}
+\emlineto{120}{400}
+\emmoveto{110}{420}
+\emlineto{100}{400}
+\emmoveto{630}{110}
+\emlineto{610}{120}
+\emmoveto{630}{110}
+\emlineto{610}{100}
+\emmoveto{310}{300}
+\emlineto{310}{299}
+\emlineto{310}{299}
+\emlineto{310}{299}
+\emlineto{311}{299}
+\emlineto{311}{298}
+\emlineto{311}{298}
+\emlineto{312}{298}
+\emlineto{312}{298}
+\emlineto{312}{298}
+\emlineto{312}{297}
+\emlineto{313}{297}
+\emlineto{313}{297}
+\emlineto{313}{297}
+\emlineto{314}{297}
+\emlineto{314}{296}
+\emlineto{314}{296}
+\emlineto{314}{296}
+\emlineto{315}{296}
+\emlineto{315}{296}
+\emlineto{315}{295}
+\emlineto{315}{295}
+\emlineto{316}{295}
+\emlineto{316}{295}
+\emlineto{316}{295}
+\emlineto{316}{294}
+\emlineto{317}{294}
+\emlineto{317}{294}
+\emlineto{317}{294}
+\emlineto{317}{294}
+\emlineto{317}{293}
+\emlineto{318}{293}
+\emlineto{318}{293}
+\emlineto{318}{293}
+\emlineto{318}{293}
+\emlineto{318}{292}
+\emlineto{318}{292}
+\emlineto{319}{292}
+\emlineto{319}{292}
+\emlineto{319}{292}
+\emlineto{319}{291}
+\emlineto{319}{291}
+\emlineto{319}{291}
+\emlineto{319}{291}
+\emlineto{319}{291}
+\emlineto{319}{290}
+\emlineto{319}{290}
+\emlineto{319}{290}
+\emlineto{319}{290}
+\emlineto{319}{290}
+\emlineto{319}{289}
+\emlineto{319}{289}
+\emlineto{319}{289}
+\emlineto{319}{289}
+\emlineto{319}{289}
+\emlineto{319}{288}
+\emlineto{319}{288}
+\emlineto{319}{288}
+\emlineto{319}{288}
+\emlineto{319}{288}
+\emlineto{319}{287}
+\emlineto{319}{287}
+\emlineto{319}{287}
+\emlineto{318}{287}
+\emlineto{318}{287}
+\emlineto{318}{286}
+\emlineto{318}{286}
+\emlineto{318}{286}
+\emlineto{318}{286}
+\emlineto{317}{286}
+\emlineto{317}{285}
+\emlineto{317}{285}
+\emlineto{317}{285}
+\emlineto{317}{285}
+\emlineto{316}{285}
+\emlineto{316}{284}
+\emlineto{316}{284}
+\emlineto{316}{284}
+\emlineto{315}{284}
+\emlineto{315}{284}
+\emlineto{315}{283}
+\emlineto{315}{283}
+\emlineto{314}{283}
+\emlineto{314}{283}
+\emlineto{314}{283}
+\emlineto{314}{282}
+\emlineto{313}{282}
+\emlineto{313}{282}
+\emlineto{313}{282}
+\emlineto{312}{282}
+\emlineto{312}{281}
+\emlineto{312}{281}
+\emlineto{312}{281}
+\emlineto{311}{281}
+\emlineto{311}{281}
+\emlineto{311}{280}
+\emlineto{310}{280}
+\emlineto{310}{280}
+\emlineto{310}{280}
+\emlineto{310}{279}
+\emshowto{330}{290}{$\gamma$}
+\emshowto{50}{400}{$P$}
+\emshowto{610}{50}{${1\over T}$}
+\emshowto{310}{340}{$\rm CHCl_3$}
+\emshowto{410}{210}{$\rm CCl_4$}
+
+}
+

@@ -1,0 +1,73 @@
+\ifx\numpoint\undefined \catcode`\@=9 \else  \catcode`\@=14  \fi
+@  \global\newcount\numpoint  \global\numpoint=1
+\ifx\numpointo\undefined \catcode`\@=9 \else  \catcode`\@=14  \fi
+@  \global\newcount\numpointo  \global\numpointo=1
+\ifx\mydimx\undefined \catcode`\@=9 \else  \catcode`\@=14  \fi
+@  \newdimen\mydimx
+\ifx\mydimy\undefined \catcode`\@=9 \else  \catcode`\@=14  \fi
+@  \newdimen\mydimy
+\catcode`\@=12
+\def\emmoveto#1#2{\offinterlineskip \hbox to 0 true cm{\vbox to 0
+true cm{\multiply \mydimx by #1 \multiply \mydimy by #2
+\vskip -\mydimy \hskip\mydimx \special{em:point \the\numpoint}\vss}\hss}
+\numpointo=\numpoint \global\advance \numpoint by 1
+\ifnum\numpoint>32760 \global \numpoint 1 \fi
+}
+\def\emlineto#1#2{\offinterlineskip \hbox to 0 true cm{\vbox to 0
+true cm{\multiply \mydimx by #1 \multiply \mydimy by #2
+\vskip -\mydimy \hskip \mydimx  \special{em:point \the\numpoint}\vss}\hss}
+\special{em:line \the\numpointo,\the\numpoint}
+\numpointo=\numpoint  \global\advance \numpoint by 1
+\ifnum\numpoint>32760 \global \numpoint 1 \fi
+}
+\def\emshowto#1#2#3{\offinterlineskip \hbox to 0 true cm{\vbox to 0
+true cm{\multiply \mydimx by #1 \multiply \mydimy by #2
+\vskip - \mydimy \hskip \mydimx \vbox to 0 true cm{\vss\hbox{#3\hss
+}}\vss}\hss
+}}    
+
+%  -------- End of Header ------------ 
+
+\special{em:linewidth 0.8pt}  
+
+\mydimx=0.100000 true mm        \mydimy=0.100000 true mm 
+\vrule width 0 mm height 0 mm depth 25 true mm 
+
+{
+\parindent 0 mm
+
+\emmoveto{70}{180}
+\emlineto{230}{180}
+\emmoveto{300}{180}
+\emlineto{460}{180}
+\emmoveto{200}{110}
+\emlineto{330}{110}
+\emmoveto{200}{60}
+\emlineto{330}{60}
+\emmoveto{70}{180}
+\emlineto{100}{190}
+\emmoveto{70}{180}
+\emlineto{100}{170}
+\emmoveto{300}{180}
+\emlineto{330}{190}
+\emmoveto{300}{180}
+\emlineto{330}{170}
+\emmoveto{200}{110}
+\emlineto{220}{120}
+\emmoveto{200}{110}
+\emlineto{220}{100}
+\emmoveto{330}{60}
+\emlineto{310}{70}
+\emmoveto{330}{60}
+\emlineto{310}{50}
+\emshowto{210}{200}{$-$}
+\emshowto{440}{200}{$-$}
+\emshowto{50}{200}{+}
+\emshowto{280}{200}{+}
+\emshowto{180}{120}{+}
+\emshowto{330}{70}{+}
+\emshowto{310}{120}{$-$}
+\emshowto{190}{70}{$-$}
+
+}
+

@@ -1,0 +1,73 @@
+\clubpenalty=10000 \widowpenalty=10000 % гЎЁа Ґв ўЁбпзЁҐ бва®ЄЁ
+
+\newcommand{\shortpage}{\enlargethispage{-\baselineskip}}
+
+%\def\trackl#1{\letterspace to 0.95\naturalwidth{#1}} % ванЄЁ­Ј, ­г¦Ґ­ letterspacing.tex
+
+%\def\trackr#1{\letterspace to 1.05\naturalwidth{#1}}
+
+\def\hlin#1{\vrule width #1 height 0,05mm depth %Ј®аЁ§®­в «м­ п зҐав 
+0,1mm}
+
+\def\itemb{\vskip 1mm\noindent\hangindent 12mm\hangafter 1\hskip \parindent\hbox to
+5mm{$\bullet$\hfill}} %бЇЁб®Є б зҐа­л¬Ё Єаг¦®зЄ ¬Ё
+
+\def\spitem{\vskip 1mm\noindent\hangindent 12mm\hangafter 1\hskip \parindent\hbox to 5mm{---\hfill}}
+\newenvironment{spis}[1]{\parindent #1}{\parindent 7mm} %бЇЁб®Є б ¤ҐдЁ§ ¬Ё
+
+\parindent 7mm
+
+\def\szagf{\bfseries} %Sans Serif
+\def\zagf{\Large\bfseries}  %Sans Serif
+\def\Small{\scriptsize}
+\def\mitsm{\scriptsize}
+
+\newcount\zagn
+\zagn0
+\newcount\subzagn
+\subzagn0
+\newcount\ssubzagn
+\ssubzagn0
+\newcount\zagpn
+\zagpn0
+
+\newdimen\sszagp \sszagp 5mm \advance\sszagp by \parindent
+
+\def\zag#1{\newpage\subzagn0\zagpn0\global\advance\zagn by 1\vskip 10mm
+\noindent{\Large ГЛАВА \the\zagn.}\vskip 3mm 
+\noindent{\zagf #1}
+\vskip 1cm
+\nglav 0\global\advance\nglav by 1 
+\numq 1
+\markboth{\hfill\small #1\hfill}{}
+}
+
+
+\def\zagp#1{\subzagn0\global\advance\zagpn by 1
+\noindent{\Large \the\zagn.\the\zagpn. #1} 
+\vskip 1cm
+\nglav 0\global\advance\nglav by 1 
+\numq 1
+\markboth{\hfill\small #1\hfill}{}
+}
+
+
+\def\subzag#1{\global\advance\subzagn by 1\vskip 7mm
+\noindent\hangindent 10mm\hangafter 1\hbox to 10mm 
+{\szagf\S\ \the\subzagn.\hfill}\hskip 0mm {\szagf #1 }\vskip
+4mm 
+\markright{\hfill\small #1\hfill}
+}
+\def\subzagl#1{\global\advance\subzagn by 1\vskip 7mm
+\noindent\hangindent 10mm\hangafter 1\hbox to 10mm 
+{\szagf\S\ \the\subzagn.\hfill}\hskip 0mm {\szagf #1 }\vskip
+4mm 
+}
+
+\def\ssubzag#1{\global\advance\ssubzagn by 1\vskip 2mm
+\noindent\hangindent\sszagp\hangafter 1\hbox to \sszagp
+{\szagf\the\zagn.\the\subzagn.\the\ssubzagn.\hfill}\hskip 0mm
+{\szagf #1 }\vskip 1mm }
+
+\def\risp#1#2{\centerline{{\small\bfseries Рис.\ \the\nglav.#1 .}\ {\small #2}}}
+\def\tabp#1#2{\noindent{\small\bfseries Таблица\ \the\nglav.#1 .}\ {\small #2}}

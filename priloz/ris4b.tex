@@ -1,0 +1,263 @@
+\ifx\numpoint\undefined \catcode`\@=9 \else  \catcode`\@=14  \fi
+@  \global\newcount\numpoint  \global\numpoint=1
+\ifx\numpointo\undefined \catcode`\@=9 \else  \catcode`\@=14  \fi
+@  \global\newcount\numpointo  \global\numpointo=1
+\ifx\mydimx\undefined \catcode`\@=9 \else  \catcode`\@=14  \fi
+@  \newdimen\mydimx
+\ifx\mydimy\undefined \catcode`\@=9 \else  \catcode`\@=14  \fi
+@  \newdimen\mydimy
+\catcode`\@=12
+\def\emmoveto#1#2{\offinterlineskip \hbox to 0 true cm{\vbox to 0
+true cm{\multiply \mydimx by #1 \multiply \mydimy by #2
+\vskip -\mydimy \hskip\mydimx \special{em:point \the\numpoint}\vss}\hss}
+\numpointo=\numpoint \global\advance \numpoint by 1
+\ifnum\numpoint>32760 \global \numpoint 1 \fi
+}
+\def\emlineto#1#2{\offinterlineskip \hbox to 0 true cm{\vbox to 0
+true cm{\multiply \mydimx by #1 \multiply \mydimy by #2
+\vskip -\mydimy \hskip \mydimx  \special{em:point \the\numpoint}\vss}\hss}
+\special{em:line \the\numpointo,\the\numpoint}
+\numpointo=\numpoint  \global\advance \numpoint by 1
+\ifnum\numpoint>32760 \global \numpoint 1 \fi
+}
+\def\emshowto#1#2#3{\offinterlineskip \hbox to 0 true cm{\vbox to 0
+true cm{\multiply \mydimx by #1 \multiply \mydimy by #2
+\vskip - \mydimy \hskip \mydimx \vbox to 0 true cm{\vss\hbox{#3\hss
+}}\vss}\hss
+}}    
+
+%  -------- End of Header ------------ 
+
+\special{em:linewidth 0.8pt}  
+
+\mydimx=0.100000 true mm        \mydimy=0.100000 true mm 
+\vrule width 0 mm height 0 mm depth 16 true mm 
+
+{
+\parindent 0 mm
+
+\emmoveto{280}{80}
+\emlineto{80}{80}
+\emmoveto{80}{80}
+\emlineto{100}{90}
+\emmoveto{80}{80}
+\emlineto{100}{70}
+\emmoveto{440}{80}
+\emlineto{460}{90}
+\emmoveto{440}{80}
+\emlineto{460}{70}
+\emmoveto{440}{80}
+\emlineto{490}{80}
+\emmoveto{510}{80}
+\emlineto{540}{80}
+\emmoveto{590}{80}
+\emlineto{560}{80}
+\emmoveto{610}{80}
+\emlineto{640}{80}
+\emmoveto{277}{100}
+\emlineto{271}{102}
+\emlineto{264}{103}
+\emlineto{257}{104}
+\emlineto{250}{105}
+\emlineto{243}{106}
+\emlineto{235}{107}
+\emlineto{227}{108}
+\emlineto{219}{108}
+\emlineto{211}{109}
+\emlineto{202}{109}
+\emlineto{194}{109}
+\emlineto{185}{109}
+\emlineto{177}{109}
+\emlineto{168}{109}
+\emlineto{160}{109}
+\emlineto{151}{109}
+\emlineto{143}{108}
+\emlineto{135}{108}
+\emlineto{127}{107}
+\emlineto{119}{106}
+\emlineto{111}{105}
+\emlineto{104}{104}
+\emlineto{97}{103}
+\emlineto{91}{102}
+\emlineto{84}{101}
+\emlineto{78}{99}
+\emlineto{73}{98}
+\emlineto{68}{96}
+\emlineto{63}{95}
+\emlineto{59}{93}
+\emlineto{56}{91}
+\emlineto{52}{90}
+\emlineto{50}{88}
+\emlineto{48}{86}
+\emlineto{46}{84}
+\emlineto{45}{82}
+\emlineto{45}{80}
+\emlineto{45}{78}
+\emlineto{45}{76}
+\emlineto{46}{75}
+\emlineto{48}{73}
+\emlineto{50}{71}
+\emlineto{53}{69}
+\emlineto{56}{67}
+\emlineto{60}{66}
+\emlineto{64}{64}
+\emlineto{69}{62}
+\emlineto{74}{61}
+\emlineto{79}{59}
+\emlineto{85}{58}
+\emlineto{92}{57}
+\emlineto{98}{56}
+\emlineto{105}{54}
+\emlineto{113}{53}
+\emlineto{120}{53}
+\emlineto{128}{52}
+\emlineto{136}{51}
+\emlineto{144}{51}
+\emlineto{153}{50}
+\emlineto{161}{50}
+\emlineto{170}{50}
+\emlineto{178}{50}
+\emlineto{187}{50}
+\emlineto{195}{50}
+\emlineto{204}{50}
+\emlineto{212}{50}
+\emlineto{220}{51}
+\emlineto{228}{52}
+\emlineto{236}{52}
+\emlineto{244}{53}
+\emlineto{251}{54}
+\emlineto{258}{55}
+\emlineto{265}{56}
+\emlineto{272}{58}
+\emlineto{278}{59}
+\emlineto{283}{60}
+\emlineto{289}{62}
+\emlineto{293}{63}
+\emlineto{298}{65}
+\emlineto{302}{67}
+\emlineto{305}{69}
+\emlineto{308}{70}
+\emlineto{310}{72}
+\emlineto{312}{74}
+\emlineto{314}{76}
+\emlineto{314}{78}
+\emlineto{314}{80}
+\emlineto{314}{82}
+\emlineto{313}{83}
+\emlineto{312}{85}
+\emlineto{310}{87}
+\emlineto{308}{89}
+\emlineto{305}{91}
+\emlineto{301}{93}
+\emlineto{297}{94}
+\emlineto{293}{96}
+\emlineto{288}{97}
+\emlineto{282}{99}
+\emlineto{277}{100}
+\emmoveto{637}{100}
+\emlineto{631}{102}
+\emlineto{624}{103}
+\emlineto{617}{104}
+\emlineto{610}{105}
+\emlineto{603}{106}
+\emlineto{595}{107}
+\emlineto{587}{108}
+\emlineto{579}{108}
+\emlineto{571}{109}
+\emlineto{562}{109}
+\emlineto{554}{109}
+\emlineto{545}{109}
+\emlineto{537}{109}
+\emlineto{528}{109}
+\emlineto{520}{109}
+\emlineto{511}{109}
+\emlineto{503}{108}
+\emlineto{495}{108}
+\emlineto{487}{107}
+\emlineto{479}{106}
+\emlineto{471}{105}
+\emlineto{464}{104}
+\emlineto{457}{103}
+\emlineto{451}{102}
+\emlineto{444}{101}
+\emlineto{438}{99}
+\emlineto{433}{98}
+\emlineto{428}{96}
+\emlineto{423}{95}
+\emlineto{419}{93}
+\emlineto{416}{91}
+\emlineto{412}{90}
+\emlineto{410}{88}
+\emlineto{408}{86}
+\emlineto{406}{84}
+\emlineto{405}{82}
+\emlineto{405}{80}
+\emlineto{405}{78}
+\emlineto{405}{76}
+\emlineto{406}{75}
+\emlineto{408}{73}
+\emlineto{410}{71}
+\emlineto{413}{69}
+\emlineto{416}{67}
+\emlineto{420}{66}
+\emlineto{424}{64}
+\emlineto{429}{62}
+\emlineto{434}{61}
+\emlineto{439}{59}
+\emlineto{445}{58}
+\emlineto{452}{57}
+\emlineto{458}{56}
+\emlineto{465}{54}
+\emlineto{473}{53}
+\emlineto{480}{53}
+\emlineto{488}{52}
+\emlineto{496}{51}
+\emlineto{504}{51}
+\emlineto{513}{50}
+\emlineto{521}{50}
+\emlineto{530}{50}
+\emlineto{538}{50}
+\emlineto{547}{50}
+\emlineto{555}{50}
+\emlineto{564}{50}
+\emlineto{572}{50}
+\emlineto{580}{51}
+\emlineto{588}{52}
+\emlineto{596}{52}
+\emlineto{604}{53}
+\emlineto{611}{54}
+\emlineto{618}{55}
+\emlineto{625}{56}
+\emlineto{632}{58}
+\emlineto{638}{59}
+\emlineto{643}{60}
+\emlineto{649}{62}
+\emlineto{653}{63}
+\emlineto{658}{65}
+\emlineto{662}{67}
+\emlineto{665}{69}
+\emlineto{668}{70}
+\emlineto{670}{72}
+\emlineto{672}{74}
+\emlineto{674}{76}
+\emlineto{674}{78}
+\emlineto{674}{80}
+\emlineto{674}{82}
+\emlineto{673}{83}
+\emlineto{672}{85}
+\emlineto{670}{87}
+\emlineto{668}{89}
+\emlineto{665}{91}
+\emlineto{661}{93}
+\emlineto{657}{94}
+\emlineto{653}{96}
+\emlineto{648}{97}
+\emlineto{642}{99}
+\emlineto{637}{100}
+\emshowto{80}{110}{+}
+\emshowto{440}{110}{+}
+\emshowto{630}{110}{$-$}
+\emshowto{270}{110}{$-$}
+
+}
+

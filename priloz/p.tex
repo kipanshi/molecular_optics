@@ -1,0 +1,71 @@
+\tolerance 900
+\font\mbold=cmmib10
+\font\glv=cmbx10 scaled \magstep2
+\font\prgf=cmbx10 scaled \magstep1
+\font\ris=cmr9
+\font\riss=cmr7
+\font\big=cmbx10 scaled \magstep2
+\font\mitsm=cmmi7
+\newcount\npar
+\newcount\numq
+\newcount\nglav
+\nglav 0
+\npar 0
+\numq 0
+\def\txxi{$\cos\varphi\cos\vartheta\cos\psi-\sin\varphi\sin\psi$}
+\def\tyxi{$\sin\varphi\cos\vartheta\cos\psi+\cos\varphi\sin\psi$}
+\def\txnu{$-\cos\varphi\cos\vartheta\sin\psi-\sin\varphi\cos\psi$}
+\def\tynu{$-\sin\varphi\cos\vartheta\sin\psi+\cos\varphi\cos\psi$}
+\def\txzeta{$\cos\varphi\sin\vartheta$}
+\def\tyzeta{$\sin\varphi\sin\vartheta$}
+\def\tzzeta{$\cos\vartheta$}
+\def\tzxi{$-\sin\vartheta\cos\psi$}
+\def\tznu{$\sin\vartheta\sin\psi$}
+\def\eqn#1{(\the\nglav.#1)}
+\def\noq{\global\advance\numq by 1\eqno(\the\nglav.\the\numq)}
+\def\exp{{\rm exp}}
+\def\rot{{\rm rot}}
+\def\diverg{{\rm div}}
+\def\grad{{\rm grad}}
+\def\prgaf#1{\global\advance\npar by 1\vskip 5 mm
+\hfil{\prgf\par\noindent\the\nglav.\the\npar .
+#1 }\hfill}
+\def\angst{\hbox{\hbox{A}\hskip -2,08 mm \raise 1,5 mm\hbox{$^\circ$}}}
+\def\sodp#1#2{\parshape 2 0.8cm 13.2cm 1.6cm 14.4cm\noindent #1\leaders\hbox{\
+.}\hfill\hbox to 2cm {\hfil #2}}
+\def\sodg#1#2{\parshape 1 0cm 16cm \noindent #1\leaders\hbox{\
+.}\hfill\hbox to 2cm {\hfil #2}}
+\def\sods#1#2{\parshape 1 0.8cm 15.2cm \noindent #1\leaders\hbox{\
+.}\hfill\hbox to 2cm {\hfil #2}}
+
+\def\inkdu{\vbox{\hbox{$-$}\vskip
+-5.2mm\hbox{$-$}\vskip -2.7mm\hbox{$|$}}}
+\def\inktri{\vbox{\hbox{$-$}\vskip
+-5.2mm\hbox{$-$}\vskip -5.2mm\hbox{$-$}\vskip -2.7mm\hbox{$|$}}}
+\def\tridot{\hbox{\raise 3mm\rlap{.\hskip-0.5mm .\hskip-0.5mm .}}}
+\def\risatri{$\overline{\cos\vartheta}$}
+
+
+
+\def\glavapa#1{\vfil\eject\noindent{\glv Приложение A. #1}\hfill}
+\def\glavapb#1{\vfil\eject\noindent{\glv Приложение B. #1}\hfill}
+\def\eqnpa#1{(#1.A)}
+\def\eqnpb#1{(#1.B)}
+\def\noqpa{\global\advance\numq by 1\eqno(\the\numq.\hbox{A})}
+\def\noqpb{\global\advance\numq by 1\eqno(\the\numq.\hbox{B})}
+\def\prgafp#1{\global\advance\npar by 1\vskip 5 mm
+\hfil{\prgf\par\noindent\S\the\npar .
+#1 }\hfill}
+\def\tg{\hbox{tg}}
+
+\input pa1.tex
+\input pa2.tex
+\input pa3.tex
+\input pa4.tex
+\input pa5.tex
+\input pa6.tex
+\input pa7.tex
+\input pa8.tex
+\input pa9.tex
+\input pb1.tex
+\bye

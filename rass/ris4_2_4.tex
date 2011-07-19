@@ -1,0 +1,83 @@
+\ifx\numpoint\undefined \catcode`\@=9 \else  \catcode`\@=14  \fi
+@  \global\newcount\numpoint  \global\numpoint=1
+\ifx\numpointo\undefined \catcode`\@=9 \else  \catcode`\@=14  \fi
+@  \global\newcount\numpointo  \global\numpointo=1
+\ifx\mydimx\undefined \catcode`\@=9 \else  \catcode`\@=14  \fi
+@  \newdimen\mydimx
+\ifx\mydimy\undefined \catcode`\@=9 \else  \catcode`\@=14  \fi
+@  \newdimen\mydimy
+\catcode`\@=12
+\def\emmoveto#1#2{\offinterlineskip \hbox to 0 true cm{\vbox to 0
+true cm{\multiply \mydimx by #1 \multiply \mydimy by #2
+\vskip -\mydimy \hskip\mydimx \special{em:point \the\numpoint}\vss}\hss}
+\numpointo=\numpoint \global\advance \numpoint by 1
+\ifnum\numpoint>32760 \global \numpoint 1 \fi
+}
+\def\emlineto#1#2{\offinterlineskip \hbox to 0 true cm{\vbox to 0
+true cm{\multiply \mydimx by #1 \multiply \mydimy by #2
+\vskip -\mydimy \hskip \mydimx  \special{em:point \the\numpoint}\vss}\hss}
+\special{em:line \the\numpointo,\the\numpoint}
+\numpointo=\numpoint  \global\advance \numpoint by 1
+\ifnum\numpoint>32760 \global \numpoint 1 \fi
+}
+\def\emshowto#1#2#3{\offinterlineskip \hbox to 0 true cm{\vbox to 0
+true cm{\multiply \mydimx by #1 \multiply \mydimy by #2
+\vskip - \mydimy \hskip \mydimx \vbox to 0 true cm{\vss\hbox{#3\hss
+}}\vss}\hss
+}}    
+
+%  -------- End of Header ------------ 
+
+\special{em:linewidth 0.8pt}  
+
+\mydimx=0.100000 true mm        \mydimy=0.100000 true mm 
+\vrule width 0 mm height 0 mm depth 31 true mm 
+
+{
+\parindent 0 mm
+
+\emmoveto{60}{260}
+\emlineto{60}{110}
+\emmoveto{270}{260}
+\emlineto{270}{110}
+\emmoveto{330}{260}
+\emlineto{330}{110}
+\emmoveto{350}{260}
+\emlineto{350}{110}
+\emmoveto{380}{260}
+\emlineto{380}{240}
+\emmoveto{380}{110}
+\emlineto{380}{130}
+\emmoveto{380}{150}
+\emlineto{380}{170}
+\emmoveto{380}{220}
+\emlineto{380}{190}
+\emmoveto{410}{260}
+\emlineto{410}{110}
+\emmoveto{430}{260}
+\emlineto{430}{110}
+\emmoveto{490}{260}
+\emlineto{490}{110}
+\emmoveto{710}{260}
+\emlineto{710}{110}
+\emmoveto{950}{260}
+\emlineto{950}{110}
+\emmoveto{830}{260}
+\emlineto{830}{110}
+\emmoveto{800}{260}
+\emlineto{800}{110}
+\emmoveto{860}{260}
+\emlineto{860}{110}
+\emmoveto{1170}{260}
+\emlineto{1170}{110}
+\emmoveto{1200}{260}
+\emlineto{1200}{110}
+\emmoveto{1230}{260}
+\emlineto{1230}{110}
+\emshowto{50}{50}{$ $}
+\emshowto{370}{50}{$¡$}
+\emshowto{820}{50}{$¢$}
+\emshowto{1190}{50}{$£$}
+
+}
+

@@ -1,0 +1,80 @@
+\ifx\numpoint\undefined \catcode`\@=9 \else  \catcode`\@=14  \fi
+@  \global\newcount\numpoint  \global\numpoint=1
+\ifx\numpointo\undefined \catcode`\@=9 \else  \catcode`\@=14  \fi
+@  \global\newcount\numpointo  \global\numpointo=1
+\ifx\mydimx\undefined \catcode`\@=9 \else  \catcode`\@=14  \fi
+@  \newdimen\mydimx
+\ifx\mydimy\undefined \catcode`\@=9 \else  \catcode`\@=14  \fi
+@  \newdimen\mydimy
+\catcode`\@=12
+\def\emmoveto#1#2{\offinterlineskip \hbox to 0 true cm{\vbox to 0
+true cm{\multiply \mydimx by #1 \multiply \mydimy by #2
+\vskip -\mydimy \hskip\mydimx \special{em:point \the\numpoint}\vss}\hss}
+\numpointo=\numpoint \global\advance \numpoint by 1
+\ifnum\numpoint>32760 \global \numpoint 1 \fi
+}
+\def\emlineto#1#2{\offinterlineskip \hbox to 0 true cm{\vbox to 0
+true cm{\multiply \mydimx by #1 \multiply \mydimy by #2
+\vskip -\mydimy \hskip \mydimx  \special{em:point \the\numpoint}\vss}\hss}
+\special{em:line \the\numpointo,\the\numpoint}
+\numpointo=\numpoint  \global\advance \numpoint by 1
+\ifnum\numpoint>32760 \global \numpoint 1 \fi
+}
+\def\emshowto#1#2#3{\offinterlineskip \hbox to 0 true cm{\vbox to 0
+true cm{\multiply \mydimx by #1 \multiply \mydimy by #2
+\vskip - \mydimy \hskip \mydimx \vbox to 0 true cm{\vss\hbox{#3\hss
+}}\vss}\hss
+}}    
+
+%  -------- End of Header ------------ 
+
+\special{em:linewidth 0.8pt}  
+
+\mydimx=0.100000 true mm        \mydimy=0.100000 true mm 
+\vrule width 0 mm height 0 mm depth 40 true mm 
+
+{
+\parindent 0 mm
+
+\emmoveto{50}{350}
+\emlineto{1340}{350}
+\emmoveto{50}{260}
+\emlineto{1340}{260}
+\emmoveto{50}{350}
+\emlineto{180}{260}
+\emmoveto{50}{50}
+\emlineto{1340}{50}
+\emmoveto{50}{190}
+\emlineto{1340}{190}
+\emmoveto{50}{120}
+\emlineto{1340}{120}
+\emmoveto{180}{350}
+\emlineto{180}{50}
+\emmoveto{660}{350}
+\emlineto{660}{50}
+\emmoveto{50}{350}
+\emlineto{50}{50}
+\emmoveto{1340}{350}
+\emlineto{1340}{50}
+\emmoveto{1140}{350}
+\emlineto{1140}{50}
+\emshowto{140}{310}{$i$}
+\emshowto{80}{280}{$\sigma$}
+\emshowto{110}{220}{$\xi$}
+\emshowto{200}{220}{\txxi}
+\emshowto{680}{220}{\tyxi}
+\emshowto{190}{150}{\txnu}
+\emshowto{670}{150}{\tynu}
+\emshowto{340}{80}{\txzeta}
+\emshowto{1150}{220}{\tzxi}
+\emshowto{1170}{150}{\tznu}
+\emshowto{1210}{80}{\tzzeta}
+\emshowto{830}{80}{\tyzeta}
+\emshowto{110}{150}{$\eta$}
+\emshowto{110}{80}{$\zeta$}
+\emshowto{410}{300}{$x$}
+\emshowto{890}{300}{$y$}
+\emshowto{1240}{300}{$z$}
+
+}
+

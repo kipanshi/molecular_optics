@@ -1,0 +1,171 @@
+\ifx\numpoint\undefined \catcode`\@=9 \else  \catcode`\@=14  \fi
+@  \global\newcount\numpoint  \global\numpoint=1
+\ifx\numpointo\undefined \catcode`\@=9 \else  \catcode`\@=14  \fi
+@  \global\newcount\numpointo  \global\numpointo=1
+\ifx\mydimx\undefined \catcode`\@=9 \else  \catcode`\@=14  \fi
+@  \newdimen\mydimx
+\ifx\mydimy\undefined \catcode`\@=9 \else  \catcode`\@=14  \fi
+@  \newdimen\mydimy
+\catcode`\@=12
+\def\emmoveto#1#2{\offinterlineskip \hbox to 0 true cm{\vbox to 0
+true cm{\multiply \mydimx by #1 \multiply \mydimy by #2
+\vskip -\mydimy \hskip\mydimx \special{em:point \the\numpoint}\vss}\hss}
+\numpointo=\numpoint \global\advance \numpoint by 1
+\ifnum\numpoint>32760 \global \numpoint 1 \fi
+}
+\def\emlineto#1#2{\offinterlineskip \hbox to 0 true cm{\vbox to 0
+true cm{\multiply \mydimx by #1 \multiply \mydimy by #2
+\vskip -\mydimy \hskip \mydimx  \special{em:point \the\numpoint}\vss}\hss}
+\special{em:line \the\numpointo,\the\numpoint}
+\numpointo=\numpoint  \global\advance \numpoint by 1
+\ifnum\numpoint>32760 \global \numpoint 1 \fi
+}
+\def\emshowto#1#2#3{\offinterlineskip \hbox to 0 true cm{\vbox to 0
+true cm{\multiply \mydimx by #1 \multiply \mydimy by #2
+\vskip - \mydimy \hskip \mydimx \vbox to 0 true cm{\vss\hbox{#3\hss
+}}\vss}\hss
+}}    
+
+%  -------- End of Header ------------ 
+
+\special{em:linewidth 0.8pt}  
+
+\mydimx=0.100000 true mm        \mydimy=0.100000 true mm 
+\vrule width 0 mm height 0 mm depth 26 true mm 
+
+{
+\parindent 0 mm
+
+\emmoveto{50}{130}
+\emlineto{370}{130}
+\emmoveto{50}{130}
+\emlineto{210}{210}
+\emmoveto{350}{140}
+\emlineto{290}{170}
+\emmoveto{210}{210}
+\emlineto{270}{180}
+\emmoveto{50}{130}
+\emlineto{210}{50}
+\emmoveto{210}{50}
+\emlineto{270}{80}
+\emmoveto{350}{120}
+\emlineto{290}{90}
+\emmoveto{210}{210}
+\emlineto{180}{180}
+\emmoveto{210}{210}
+\emlineto{170}{210}
+\emmoveto{370}{130}
+\emlineto{330}{140}
+\emmoveto{370}{130}
+\emlineto{330}{120}
+\emmoveto{210}{50}
+\emlineto{170}{50}
+\emmoveto{190}{80}
+\emlineto{210}{50}
+\emmoveto{90}{110}
+\emlineto{90}{110}
+\emlineto{90}{110}
+\emlineto{90}{111}
+\emlineto{91}{111}
+\emlineto{91}{112}
+\emlineto{91}{112}
+\emlineto{92}{112}
+\emlineto{92}{113}
+\emlineto{92}{113}
+\emlineto{92}{114}
+\emlineto{93}{114}
+\emlineto{93}{114}
+\emlineto{93}{115}
+\emlineto{94}{115}
+\emlineto{94}{116}
+\emlineto{94}{116}
+\emlineto{94}{116}
+\emlineto{95}{117}
+\emlineto{95}{117}
+\emlineto{95}{118}
+\emlineto{95}{118}
+\emlineto{96}{118}
+\emlineto{96}{119}
+\emlineto{96}{119}
+\emlineto{96}{120}
+\emlineto{97}{120}
+\emlineto{97}{120}
+\emlineto{97}{121}
+\emlineto{97}{121}
+\emlineto{97}{122}
+\emlineto{98}{122}
+\emlineto{98}{122}
+\emlineto{98}{123}
+\emlineto{98}{123}
+\emlineto{98}{124}
+\emlineto{98}{124}
+\emlineto{99}{124}
+\emlineto{99}{125}
+\emlineto{99}{125}
+\emlineto{99}{126}
+\emlineto{99}{126}
+\emlineto{99}{126}
+\emlineto{99}{127}
+\emlineto{99}{127}
+\emlineto{99}{128}
+\emlineto{99}{128}
+\emlineto{99}{128}
+\emlineto{99}{129}
+\emlineto{99}{129}
+\emlineto{99}{130}
+\emlineto{99}{130}
+\emlineto{99}{131}
+\emlineto{99}{131}
+\emlineto{99}{131}
+\emlineto{99}{132}
+\emlineto{99}{132}
+\emlineto{99}{133}
+\emlineto{99}{133}
+\emlineto{99}{133}
+\emlineto{99}{134}
+\emlineto{99}{134}
+\emlineto{99}{135}
+\emlineto{98}{135}
+\emlineto{98}{135}
+\emlineto{98}{136}
+\emlineto{98}{136}
+\emlineto{98}{137}
+\emlineto{98}{137}
+\emlineto{97}{137}
+\emlineto{97}{138}
+\emlineto{97}{138}
+\emlineto{97}{139}
+\emlineto{97}{139}
+\emlineto{96}{139}
+\emlineto{96}{140}
+\emlineto{96}{140}
+\emlineto{96}{141}
+\emlineto{95}{141}
+\emlineto{95}{141}
+\emlineto{95}{142}
+\emlineto{95}{142}
+\emlineto{94}{143}
+\emlineto{94}{143}
+\emlineto{94}{143}
+\emlineto{94}{144}
+\emlineto{93}{144}
+\emlineto{93}{145}
+\emlineto{93}{145}
+\emlineto{92}{145}
+\emlineto{92}{146}
+\emlineto{92}{146}
+\emlineto{92}{147}
+\emlineto{91}{147}
+\emlineto{91}{147}
+\emlineto{91}{148}
+\emlineto{90}{148}
+\emlineto{90}{149}
+\emlineto{90}{149}
+\emlineto{90}{150}
+\emshowto{120}{140}{$\vartheta$}
+\emshowto{100}{180}{$p_1$}
+\emshowto{100}{70}{$p_2$}
+\emshowto{380}{120}{$p$}
+
+}
+

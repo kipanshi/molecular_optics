@@ -1,0 +1,573 @@
+\prgaf{Рэлеевское и комбинационное рассеяние в газах,
+кинетическая теория и вращательное тушение}
+\vskip 3mm
+
+Рассмотрим теперь спектр излучения, рассеянного
+аксиально-симметричной молекулой, в предельном случае
+разреженного газа, когда средняя длина свободного пробега
+рассеивателя (молекулы) велика по сравнению с длинной волны этого
+излучения. Начнем с предположения, что вданном предельном случае
+разреженного газа в выражения \eqn{26} и \eqn{27} дают вклад лишь
+члены с $i=j$. Кроме того, предположим, что для молекулы можно
+произвести разделение поступательного, вращательного и
+колебательного типов движения. Фазовый множитель поступательного
+движения в \eqn{26} и \eqn{27} для молекулы, движущейся со
+скоростью $\vec v$, записывается в виде ($i=j$)
+$$\exp{-i\vec K\cdot[\vec r_j(0)-\vec r_j(\tau)]}=\exp(i\vec
+K\cdot\vec v\tau),\noq$$
+где использовано соотношение $\vec r_j(\tau)-\vec r_j(0)=\vec
+v\tau$. Применим приближение независимых частиц, подставим
+разложение \eqn{36} в формулы \eqn{35}, а затем найденные
+результаты подставим, учитывая формулы \eqn{37} и \eqn{33}, в
+выражения \eqn{26} и \eqn{27}. Используя эргодическую гипотезу,
+получим корреляционные функции для перехода $k\rightarrow k'$
+(все перекрестные члены обращаются в нуль в случае изотропного
+газообразного образца):
+$$\eqalign{
+C_z(t)=&NA\,\exp(-i\omega_0t)\exp(i\vec K\cdot\vec
+vt)P_k\exp(i\omega_{k'k}t)\times\cr
+\times&\left(\left(\int\psi_{k'}^*\alpha^0\psi_kdV\right)^2+\left\{\int
+\psi_{k'}^*\left[{2\over3}(\alpha_{aa}^0-\alpha_{bb}^0)P_2(\cos\theta)\right]\right.\right.\times\cr
+\times&\left.\
+psi_kdV\right\}^2+\left(\int\psi_{k'}^*\left({\partial
+\alpha\over\partial Q_j}\right)_0Q_j\psi_kdV\right)^2+\cr
++&\left.\left\{\int\psi_{k'}^*\left[\left({\partial\alpha_{aa}\over
+\partial Q_j}\right)_0-\left({\partial\alpha_{bb}\over\partial
+Q_j}\right)_0\right]Q_jP_2(\cos\theta)\psi_kdV\right\}^2\right),\cr
+}$$
+$$\eqalign{
+C_y(t)=&NA\,\exp(-i\omega_0t)\exp(i\vec K\cdot\vec
+vt)P_k\exp(i\omega_{k'k}t)\times\cr
+\times&\left(\left[\int
+\psi_{k'}^*(\alpha_{aa}^0-\alpha_{bb}^0)\cos\theta\sin\theta\sin\varphi\psi_kdV\right]\right.+\cr
++&\left.\left\{\int\psi_{k'}^*\left[\left({\partial\alpha_{aa}\over
+\partial Q_j}\right)_0-\left({\partial\alpha_{bb}\over\partial
+Q_j}\right)_0\right]Q_j\cos\theta\sin\theta\sin\varphi\psi_kdV\right\}^2\right),\cr
+P_k=&{N_k\over N}.
+}\noq$$
+Здесь N -- полное число рассеивателей, равное $\rho_0V_s$, т. е.
+равное числу частиц в единице объема, умноженному на величину
+облученного светом объема, сфокусированного на приемник. Величина
+$P_k$ представляет собой вероятность того, что система находится
+в начальном состоянии $k$, $N_k$ --- число молекул в этом
+состоянии. Функция $\psi_k$ является произведением вращательной и
+колебательной функции в $k$-ом состоянии, причем усреднение по
+электронным волновым функциям учитывается теперь в членах
+$\alpha_{aa}^0$, $\alpha_{bb}^0$, $(\partial\alpha_{aa}/\partial Q_j)_0$
+и $(\partial\alpha_{bb}/\partial Q_j)_0.$ Матричные элементы
+$\psi_{k'}\psi_k$ в выражении для $C_z(t)$, где штрих оозначает
+конечное состояние, определяют правила отбора для процессов
+рассеяния.
+
+Остановимся теперь подробнее на выражении для $C_z(t)$ в формулах
+\eqn{38} и учтем лишь параллельные колебания молекул. Подставляя
+функцию $\psi_k=Y_{JM}(\theta,\varphi)\psi_{n_{j}}(Q_j)$, где
+$Y_{JM}(\theta,\varphi)$ --- вращательная собственная функция
+линейной молекулы и $\psi_{n_{j}}(Q_j)$ --- функция
+гармонического осциллятора для $j$-й параллельной моды ($n_j$
+характеризует колебательное состояние), получаем следующее
+выражение для $C_z(t)$:
+$$\eqalign{
+C_z(t)=&A\,\exp(-i\omega_0t)\exp(i\vec K\cdot\vec
+vt)\left(N(\alpha^0)^2+N_{JM}\exp(i\omega_Rt)\times\right.\cr
+\times&\left[{4\over3}\left({\pi\over5}\right)^{1/2}(\alpha_{aa}^0-\alpha_{bb}^0)
+\int\limits_0^{2\pi}\int\limits_0^{\pi}Y^*_{JM}Y_{20}Y_{J'M'}\sin\theta
+d\theta d\varphi\right]^2+\cr
++&N_{n_{j}}\exp(i\omega_jt)\left[\left({\partial\alpha\over\partial
+Q_j}\right)_0<n_j|\theta_j|n'_j>\right]^2+\cr
++&N_{n_{j}JM}\exp(i\omega_{jR}t)\left\{{4\over3}\left({\pi\over5}\right)^{1/2}
+\left[{\partial(\alpha_{aa}-\alpha_{bb})\over\partial
+Q_j}\right]_0<n_j|Q_j|n'_j>\right.\times\cr
+\times&\left.\left.\int\limits_0^{2\pi}\int\limits_0^{\pi}Y^*_{JM}Y_{20}Y_{J'M'}\sin\theta
+d\theta d\varphi\right\}\right),\cr
+\omega_R=&{(E_{J'M'}-E_{JM})\over\hbar},\hskip
+4mm\omega_j={(E_{n'_{j}}-E_{n_{j}})\over\hbar},\cr
+\omega_{jR}=&{(E_{n'_{j}}+E_{J'M'}-E_{n_{j}}-E_{JM})\over\hbar},\cr
+}\noq$$
+где также использована функция
+$P_2(\cos\theta)=2(\pi/5)^{1/2}Y_{20}$. В формуле \eqn{39}
+$\omega_R$ --- чисто вращательная частота, $\omega_j$ --- чисто
+колебательная частота, а $\omega_{jR}$ ---
+колебательно-вращательная частота. $N$ --- полное число
+рассеивателей; $N_{JM}$ --- число молекул, находящихся во
+вращательном состоянии $JM$; $N_{n_{j}}$ --- число молекул,
+находящихся в $n$-м состоянии $j$-й колебательной моды;
+$N_{n_{j}JM}$ --- число молекул, находящихся в
+колебательно-вращательном состоянии $n_j,\ JM$. Первый член в
+формуле \eqn{39} соответствует рэлеевскому рассеянию с весовым
+множителем $(\alpha^0)^2$. Второй член описывает чисто
+вращательное комбинационное рассеяние с правилами отбора $\Delta
+J=0,\ \pm2,\ \Delta M=0$; для амплитудного множителя, зависящего
+от вращения, мы введем обозначение
+$$f_{JM}=N_{JM}\left[{4\over3}\left({\pi\over5}\right)^{1/2}
+(\alpha_{aa}^0-\alpha_{bb}^0)\int\limits_0^{2\pi}\int\limits_0^{\pi}
+Y^*_{JM}Y_{20}Y_{J'M'}\sin\theta
+d\theta d\varphi\right]^2.\noq$$
+Третий член соответствует чисто колебательному комбинационному
+рассеянию с правилами отбора $\Delta n=+1$ для гармонического
+осциллятора; амплитуду колебательного рассеяния для $j$-й
+параллельной моды мы обозначим как
+$$f_j=N_{n_{j}}\left[\left({\partial\alpha\over\partial
+Q_j}\right)_0<n_j|Q_j|n'_j>\right]^2.\noq$$
+Четвертый член в формуле \eqn{39} описывает
+колебательно-вращательное комбинационное рассеяние с правилами
+отбора $\Delta n=+1,\ \Delta J=0,\ \pm2,\ \Delta M=0$, и для
+амплитуды колебательно-вращательного рассеяния мы применим
+обозначение
+$$\eqalign{
+f_{JM_j}=&N_{n_{j}JM}\left\{{4\over3}\left({\pi\over5}\right)^{1/2}
+\left[\left({\partial\alpha_{aa}\over\partial
+Q_j}\right)_0-\left({\partial\alpha_{bb}\over\partial
+Q_j}\right)_0\right]<n_j|Q_j|n'_j>\times\right.\cr
+\times&\left.\int\limits_0^{2\pi}\int\limits_0^{\pi}
+Y^*_{JM}Y_{20}Y_{J'M'}\sin\theta
+d\theta d\varphi\right\}^2.\cr
+}\noq$$
+подставляя выражения \eqn{40}, \eqn{41} и \eqn{42} в \eqn{39},
+получаем
+$$\eqalign{
+C_z(t)=&A\,\exp(-i\omega_0t)\exp(i\vec K\cdot\vec
+vt)[N(\alpha^0)^2+\cr
++&f_{JM}\exp(i\omega_Rt)+f_j\exp(i\omega_jt)+f_{JM_{j}}\exp(i\omega_{jR}t)].\cr
+}\noq$$
+Отметим здесь, что формула \eqn{43} была выведена для случая лишь
+одной скорости молекул $\vec v$ в приближении независимых частиц
+при отсутствии столкновительной релаксации. Теперь мы учтем
+усредненное по Больцману распределение скоростей, а также
+процессы релаксации, как вращательной, так и колебательной.
+
+Рассмотрим сначала усреднение по скорости фазового множителя
+$\exp(i\vec K\cdot\vec vt)$ в выражении \eqn{43}. Усреднение
+множителя $\exp(i\vec K\cdot\vec vt)$ по всем скоростям в
+трехмерном пространстве проводится путем обобщения нормированной
+функции распределения Максвелла-Больцмана с учетом вероятности
+различных значений скоростей:
+$$\eqalign{
+[\exp(i\vec K\cdot\vec vt)_{\rm ср}=&\left({M\over2\pi
+kT}\right)^{3/2}\int\limits_{-\infty}^{\infty}\int\limits_{-\infty}^{\infty}
+\int\limits_{-\infty}^{\infty}\exp(i\vec K\cdot\vec vt)\times\cr
+\times&\exp\left[-{M\over2kT}(v_x^2+v_y^2+v_z^2)\right]dv_xdv_ydv_z=\cr
+=&\exp\left[-\left({kt\over2M}\right)K^2t^2\right].\cr
+}\noq$$
+Полуширина этой гауссовой кривой (в шкале времени) равна
+$$\Delta t={1\over K}\left({2M\ln2\over kT}\right)^{1/2}.\noq$$
+
+Учтем, наконец, эффекты первого порядка релаксации молекул во
+вращательном $(\tau_R)$ и колебательном $(\tau_V)$ состояниях,
+причем следует ожидать, что $\tau_V\gg\tau_R$. Вводя
+соответствующие релаксации первого порядка в выражение \eqn{43} и
+подставляя соотношение \eqn{44} для усреднения по скоростям,
+получаем
+$$\eqalign{
+C_z(t)=&A\,\exp(-i\omega_0t)\exp\left[
+-\left({kT\over2M}\right)K^2t^2\right]\left[
+N(\alpha^0)^2+\right.\cr
++&f_{JM}\exp(i\omega_Rt)\exp\left(-{t\over\tau_R}\right)+
+f_j\exp(i\omega_jt)\exp\left(-{t\over\tau_j}\right)+\cr
++&\left.f_{JM_{j}}\exp(i\omega_{jR}t)\exp\left(-{t\over\tau_R}\right)\exp
+\left(-{t\over\tau_j}\right)\right].\cr
+}\noq$$
+Здесь $N$ --- число рассеивателей, $A$ определено выражениями
+\eqn{27} и \eqn{28}, $f_{JM},\ f_j$ и $f_{JM_j}$ определены
+формулами \eqn{40}, \eqn{41} и \eqn{42} соответственно, $\tau_R$
+--- время вращательной релаксации вращательного состояния $JM$, а
+$\tau_j$ --- время колебательной релаксации $j$-го колебательного
+состояния.
+
+Для выражения \eqn{46} имеются два интересных предельных случая:
+случай низких давлений, когда члены затухания
+$\exp[-(kT/2M)K^2t^2]$ доминируют по сравнению с релаксационными
+членами $\exp(-t/\tau_R)$ и $\exp(-t/\tau_j)$, и случай очень
+высоких давлений, когда релаксационные члены превышают гауссов
+член затухания $\exp[-(kT/2M)K^2t^2]$. Рассмотрим теперь спектры,
+получающиеся в этих двух предельных случаях. Подставляя выражение
+\eqn{46} в формулу \eqn{22} получаем интенсивность, расчитанную
+на единичный интервал частот, для $N$ рассеивателей {величина
+$\Delta t$ определена согласно \eqn{45}.
+
+\noindent{\it Низкое давление:} $\Delta t\ll\tau_R,\ \Delta
+t\ll\tau_j$
+$$\eqalign{
+I_v^v(\omega)=&{1\over\pi}\hbox{Re}\int\limits_0^{\infty}C_z(t)\exp(i\omega
+t)dt=\cr
+=&{A\over K}\left({M\over2\pi
+kT}\right)^{1/2}\left\{N(\alpha^0)^2\exp\left[-\left({M\over2K^2k
+T}\right)(\omega-\omega_0)^2\right]+\right.\cr
++&f_{JM}\exp\left[-\left({M\over2K^2k
+T}\right)(\omega+\omega_R-\omega_0)^2\right]+\cr
++&f_{j}\exp\left[-\left({M\over2K^2k
+T}\right)(\omega+\omega_j-\omega_0)^2\right]+\cr
++&\left.f_{JM_j}\exp\left[-\left({M\over2K^2k
+T}\right)(\omega+\omega_{jR}-\omega_0)^2\right]\right\}.
+}\noq$$
+{\it Высокое давление}: $\Delta t\gg\tau_R,\ \Delta t\gg\tau_j$
+$$\eqalign{
+I_v^v(\omega)=&{NA\over K}\left({M\over2\pi k
+T}\right)^{1/2}(\alpha^0)^2\exp\left[-\left({M\over2K^2kT}\right)
+(\omega-\omega_0)^2\right]+\cr
++&{A\over\pi}f_{JM}\left[{(1/\tau_R)\over(1/\tau_R)^2+(\omega+\omega_R-\omega_0)^2}\right]+\cr
++&{A\over2\pi}f_{j}\left[{(1/\tau_j)\over(1/\tau_j)^2+(\omega+\omega_j-\omega_0)^2}\right]+\cr
++&{A\over2\pi}f_{JM_j}\left[{(1/\tau_j+1/\tau_R)\over(1/\tau_j+1/\tau_R)^2+(\omega+\omega_{jR}-\omega_0)^2}\right].\cr
+}\noq$$
+Первые члены в формулах \eqn{47} и \eqn{48} соответствуют
+рэлеевскому рассеянию, вторые члены с частотами вокруг
+$(\omega_0-\omega_R)$ --- чисто вращательному комбинационному
+рассеянию, третьи члены с частотами вокруг $(\omega_0-\omega_j)$
+--- чисто колебательному комбинационному рассеянию, а четвертые
+члены с частотами вокруг $(\omega_0-\omega_{jR})$ ---
+колебательно-вращательному комбинационному рассеянию [определения
+$\omega_R,\ \omega_j,\ \hbox{и}\ \omega_{jR}$ см. в \eqn{39}].
+Все четыре члена в выражении \eqn{47} при доплеровском уширении в
+предельном случае низких давлений представляют собой гауссовы
+кривые с полуширинами $\Delta\omega=K(2kT\ln2/M)^{1/2}$, где $K$
+--- величина вектора рассеяния. Таким образом, нами получен
+весьма интересный результат: полуширина пропорциональна вектору
+рассеяния $K=(4\pi/\lambda)\sin(\theta_s/2)$. Отсюда вытекает,
+что в данном предельном случае низких давлений при малых углах
+рассеяния может быть достигнуто очень высокое разрешение (см.
+рис. 4.4.1). Экспериментальную проверку этого вывода можно найти
+в работе \slit.
+
+В предельном случае высоких давлений формула \eqn{48} приводит к
+гауссовому контуру линий для рэлеевского рассеяния (с центром в
+точке $\omega_0$) и к лоренцевой форме для всех типов
+комбинационного рассеяния. Полуширины для остающихся членов равны
+$\Delta\omega={1\over\tau_R}$ для чисто вращательного члена,
+$\Delta\omega={1/\tau_j}$ для чисто колебательного члена и
+$\Delta\omega=(1/\tau_j+1/\tau_R)$ для колебательно-вращательного
+члена.
+
+В промежуточном случае, когда существенны как эффект Доплера, так
+и процессы релаксации, непосредственное фурье-преобразование
+выражения \eqn{46} позволяет получить спектр. Последний будет
+представлять собой свертку гауссовых и лоренцевых
+кривых\footnote{*}{Подробности см. {\it У. Флайгер}, Динамика и
+свойства молекул, разд. 7.2}.
+
+Отметим также, что, согласно определению коэффициентов $f$ в
+\eqn{40}, \eqn{41} и \eqn{42} и множителя $N_k$ в \eqn{38}, при
+$E(n_jJM)>E(n'_jJ'M')$ и любой комбинации квантовых чисел $n_j,\
+J,\ M,\ n'_j,\ J'$ и $M'$ (штрихи отвечают конечному состоянию)
+величина $\omega_{n'_jJ'M'}$ является отрицательной. Это приводит
+к возрастанию частот комбинационного рассеяния по сравнению с
+частотой пдающего излучения $\omega_0$. Такие переходы называют
+{\it антистоксовыми переходами. Стоксовы переходы} приводят к
+появлению частот, меньших чем $\omega_0$, благодаря условию
+$E(n_jJM)<E(n'_jJ'M')$, приводящему к положительным значениям
+величины $\omega_{n'_jJ'M',n_jJM}$. Разумеется, из определения
+множителя $N_k$ согласно \eqn{38} следует также, что стоксовы
+переходы $[E(n_jJM)<E(n'_jJ'M')]$ будут более интенсивны, чем
+антистоксовы $[E(n_jJM)>E(n'_jJ'M')]$.
+
+Вернемся теперь к выражению \eqn{38} для $C_y(t)$. Подставляя
+соотношение
+$$\cos\theta\sin\theta\sin\varphi=i\left({2\pi\over15}\right)^{1/2}(Y_{2-1}-Y_{21})$$
+и проделывая все преобразования, описаные вслед  \eqn{38},
+получаем для $C_y(t)$ выражение, аналогичное \eqn{46}:
+$$\eqalign{
+C_y(t)=&A\exp(-i\omega_0t)\exp\left[-\left({kT\over
+M}\right)K^2t^2\right]\times\cr
+\times&\left[f'_{JM}\exp(-i\omega_Rt)\exp\left(-{t\over\tau_R}\right)+\right.\cr
++&\left.f'_{JM_j}\exp(-i\omega_{jR}t)\exp\left(-{t\over\tau_R}\right)\exp\left(-{t\over\tau_j}\right)\right],\cr
+}$$
+$$\eqalign{
+f'_{JM}=N_{JM}\left({2\pi\over15}\right)
+\left[(\alpha^0_{aa}-\alpha_{bb}^0)\int\limits_0^{2\pi}\int\limits_0^{2\pi}
+Y^*_{JM}(Y_{2-1}\right.&-Y_{21})\times\cr
+\times&\left.Y_{J'M'}\sin\theta d\theta d\varphi\right]^2,\cr
+}$$
+$$\eqalign{
+f'_{JM_j}=N_{n_jJM}&\left({2\pi\over15}\right)\left\{\left[\left({\partial
+\alpha_{aa}\over\partial
+Q_j}\right)_0-\left({\partial\alpha_{bb}\over\partial
+Q_j}\right)_0\right]<n'_j|Q_j|n_j>\times\right.\cr
+\times&\left.\int\limits_0^{2\pi}\int\limits_0^{2\pi}
+Y^*_{JM}(Y_{2-1}-Y_{21})Y_{J'M'}\sin\theta d\theta
+d\varphi\right\}^2.
+}\noq$$
+Таким образом, корреляционная функция $C_y(t)$, приводящая к
+деполяризованным спектрам, включает в себя чисто вращательный
+член с правилами отбора $\Delta J=0,\ \pm2,\ \Delta M=\pm1$ и
+колебательно-вращательный член с правилами отбора для
+параллельных колебаний $\Delta n_j=\pm1,\ \Delta J=0,\ \pm2,
+\Delta M=\pm 1$. Частотно-временн$\acute{\hbox{о}}$е
+фурье-преобразование функции $C_y(t)$ \eqn{49} для получения
+спектральной функции $I_h^v(\omega)$ производится по методике,
+описанной ранее при получении функции $I_v^v(\omega)$ в обоих
+предельных случаях высоких и низких давлений. Непосредственное
+выполнение этих преобразований предоставляется читателю.
+Дополнительные подробности, касающиеся динамики молекул и
+рассеяния света в газах, можно найти \slit.
+
+Вернемся теперь к выражениям \eqn{26} и \eqn{27} и исследуем
+корреляционные функции для случая очень высоких давлений или
+конденсированной фазы (жидкости), когда время между
+столкновениями мало по сравнению с периодом вращения молекулы. В
+этом предельном случае вращательного тушения понятие
+вращательного состояния теряет смысл, и для вывода корреляционных
+функций, позволяющих получить спектры, необходимо использовать
+иной подход. Для простоты рассмотрения предположим сначала, что
+молекула представляет собой жесткий неколеблющийся волчок.
+Подставляя формулы \eqn{35} в \eqn{26} и \eqn{27}, получаем
+$$\parallel\hskip 7 true mm
+C_z(t)={c\over4\pi}<E_z(0)E_z^*(t)>=A\left<\sum\limits_{i,j}\left[\alpha+{2\over3}
+(\alpha_{aa}-\alpha_{bb})P_2(\cos\theta)\right]_{0i}\times\right.$$$$\times\left[\alpha+{2\over3}
+(\alpha_{aa}-\alpha_{bb})P_2(\cos\theta)\right]_j\times\exp(-i\omega_0t)\exp\{i\vec
+K[\vec r_i(0)-\vec r_j(t)]\}\Bigg>,\noq$$
+$$\perp\hskip 7 true mm
+C_y(t)={c\over4\pi}<E_y(0)E_y^*(t)>=A\left<
+\sum\limits_{i,j}(\cos\theta\sin\theta\sin\varphi)_{0i}\times\right.$$$$\times(\cos\theta\sin\theta
+\sin\varphi)_j(\alpha_{aa}-\alpha_{bb})_{0i}\times
+(\alpha_{aa}-\alpha_{bb})_j\exp(-i\omega_0t)\exp\left\{-i\vec K[\vec
+r_i(0)-\vec r_j(t)]\right\}\Bigg>,\noq$$
+где из-за вращения молекулы $\theta$ и $\varphi$ зависят от времени.
+Индекс 0 указывает, что значения величин в
+корреляционных функциях взяты при $t=0$. Если рассеиватели
+ориентированы в пространстве хаотически (изотропное
+распределение), то средние значения перекрестных членов $\alpha
+P_2(\cos\theta)_i$ и $\alpha P_2(\cos\theta)_j$ в \eqn{50}
+обращаются в нуль. Предположим также, что все неколеблющиеся
+молекулы или рассеиватели в газе, жидкости и твердом теле эквивалентны, а величины
+$\alpha$ и $(\alpha_{aa}-\alpha_{bb})$ не зависят от времени.
+Тогда можно переписать выражения \eqn{50} и \eqn{51} следующим образом:
+$$C_z(t)=A\exp(-i\omega_0t)\alpha^2\left<\sum\limits_{i,j}\exp\left\{
+-i\vec K[\vec r_i(0)-\vec r_j(t)]\right\}\right>+$$$$+{4\over9}A
+\exp(-i\omega_ot)(\alpha_{aa}-\alpha_{bb})^2\left<\sum\limits_{i,j}P_2(\cos\theta)_{0i}P_2(\cos\theta)_j\times
+\exp\left\{-i\vec K[\vec r_i(0)-\vec r_j(t)]\right\}\right>,\noq$$
+$$C_y(t)=A\exp(-i\omega_0t)(\alpha_{aa}-\alpha_{bb})^2\times$$$$\times\left<\sum\limits_{i,j}
+(\cos\theta\sin\theta\sin\varphi)_{0i}\times(\cos\theta\sin\theta\sin\varphi)_j
+\times\exp\left\{-i\vec K[\vec r_i(0)-\vec
+r_j(t)]\right\}\right>.\noq$$
+Как было отмечено при обсуждении, следующем за формулой \eqn{28},
+члены с $i=j$ называют {\it собственными членами}, а члены с
+$i\not=j$ --- {\it различными членами}.
+Hа основании эргодической гипотезы корреляционные функции для
+одинаковых рассеивателей записываются с учетом усреднения по всем
+положениям и ориентациям в виде
+$$C_z(t)=A\exp(-i\omega_0t)N\alpha^2\int\limits_{V_s}\exp(i\vec
+K\cdot\vec R)P(\vec
+R,t)dV_s+{4\over9}A\exp(-i\omega_0t){N(\alpha_{aa}-\alpha_{bb})\over4\pi}\times$$
+$$\times\int\limits_{0}^{2\pi}
+\int\limits_{0}^{2\pi}\int\limits_{-1}^{1}\int\limits_{-1}^{1}\int\limits_{V_s}
+\exp(i\vec K\cdot\vec R)\times P_2(\cos\theta_0)P_2(\cos\theta)P(\vec
+R,\theta,\varphi,t)dV_sd\cos\theta_0d\cos\theta
+d\varphi_0d\varphi,\noq$$
+$$C_y(t)=A\exp(-i\omega_0t){N(\alpha_{aa}-\alpha_{bb})\over4\pi}\int\limits_{0}^{2\pi}
+\int\limits_{0}^{2\pi}\int\limits_{-1}^{1}\int\limits_{-1}^{1}\int\limits_{V_s}
+\exp(i\vec K\cdot\vec
+R)\times$$$$\times(\cos\theta\sin\theta\sin\varphi)_0(\cos\theta\sin\theta\sin\varphi)
+\times P(\vec R,\theta,\varphi,t)dV_sd\cos\theta_0\cos\theta
+d\varphi_0d\varphi,\noq$$
+где для удобства интеграл $\int\limits_0^{\pi}\sin\theta d\theta$
+заменен интегралом $\int\limits_{-1}^1d\cos\theta$.
+Величина $N$ представляет собой число рассеивателей в
+рассеивающем объеме $V_s$, $dV_s$ ---
+элемент объема, и соответствующий интеграл охватывает рассеивающий
+объем (облучаемый объем, сфокусированный на приемник). В
+записанных выражениях
+функции $P(a)$ представляют собой
+пространственно-временн$\acute{\hbox{ы}}$е и
+ориентационно-пространственно-временн$\acute{\hbox{ы}}$е корреляционные
+функции.
+$P(\vec R,t)$ --- рассчитанная на единицу объема
+вероятность того, что если в момент времени $t=0$ центр рассеяния
+находится в точке $\vec R=0$, то в момент $t$ будет иметься центр
+рассеяния в точке $\vec R$. Таким образом, очевидно, что $P(\vec
+R,t)$ содержит пространственные и временн$\acute{\hbox{ы}}$е члены,
+как собственные, так и различные.
+$P(\vec R,\theta,\varphi,t)$ представляет собой
+ориентационно-пространственно-временн$\acute{\hbox{у}}$ю
+корреляционную функцию.
+Она дает рассчитанную на единицу объема вероятность того, что если
+центр взаимодействия частицы с ориентацией $\theta_0$ и $\varphi_0$
+находился в точке $\vec R=0$ в момент времени $t=0$, то будет
+иметься также частица с ориентацией $\theta$ и $\varphi$ в точке $\vec R$ в
+момент времени $t$. Дополнительный множитель ${1\over4\pi}$, связанный с
+вероятностями $P(\vec R,\theta,\varphi,t)$, получается в
+предположении нормировки вероятностей при начальных условиях в момент
+$t=0$. Если $P(\vec R,t)=\delta(\vec R)$, т. е.
+трехмерной дельта функции при $t=0$, то имеем
+$$\int\limits_{V_s}\exp(i\vec K\cdot\vec R)P(\vec
+R,0)dV_s=\int\limits_{V_s}\exp(i\vec K\vec R)\delta(\vec
+R)dV_s=1,\noq$$
+а если $P(\vec R,\theta,\varphi,t)=\delta(\vec
+R)\delta(\cos\theta-\cos\theta_0)\times\delta(\varphi-\varphi_0)$,
+то имеем
+$$\int\limits_{0}^{2\pi}\int\limits_{0}^{2\pi}\int\limits_{-1}^{1}\int
+\limits_{-1}^{1}\int\limits_{V_s}\exp(i\vec K\cdot\vec R)P(\vec
+R,\theta,\varphi,t)dV_sd\cos\theta_0d\cos\theta
+d\varphi_0d\varphi=$$
+$$=\int\limits_{0}^{2\pi}\int\limits_{0}^{2\pi}\int\limits_{-1}^{1}\int
+\limits_{-1}^{1}\int\limits_{V_s}\exp(i\vec K\cdot\vec
+R)\delta(\vec
+R)\delta(\cos\theta-\cos\theta_0)\times\delta(\varphi-\varphi_0)dV_s
+d\cos\theta_0 d\cos\theta
+d\varphi_0d\varphi=$$$$=\int\limits_{0}^{2\pi}
+\int\limits_{-1}^{1}d\cos\theta_{0}d\varphi_0=4\pi.\noq$$
+В результатах \eqn{56} и \eqn{57} использовано важное приближение, согласно
+которому предполагается, что интеграл по рассеивающему объему
+$V_s$ сохраняет смысл при $R\rightarrow\infty$. Это приближение
+является достаточно хорошим, если размеры рассеивателя малы по
+сравнению с фактическим рассеивающим объемом.
+Использование данного приближения приводит к преобразованию Фурье трехмерной
+дельта-функции $\delta(\vec R)$ в формулах \eqn{56} и \eqn{57},
+дающему единицу. В более общем случае можно записать
+$$\int\limits_{V_s}\exp(i\vec K\cdot\vec R)\cdot P(\vec
+R,t)dV_s\approx \overline{P}(K,t).\noq$$
+Таким образом $\overline{P}(K,t)$ --- трехмерный пространственный фурье-образ
+$P(\vec R,t)$.
+
+Выражения \eqn{54} и \eqn{55} будут широко использоваться далее
+для описания рассеяния системами с вращательным тушением.
+Для получения выражений для $P(\vec R,t)$ и
+$P(\vec R,\theta,\varphi,t)$ мы воспользуемся гидродинамическими
+теориями. Так, например, выражение для $P(\vec R,t)$ в первом
+члене формулы \eqn{54} получается в случае чистой жидкости путем
+решения трех связанных уравнений --- уравнения непрерывности,
+уравнения Навье --- Стокса и уравнения переноса энергии, что
+приводит к рассеянию Рэлея --- Бриллюэна.
+
+
+Полные интенсивности получаются из выражений для $C_z\ (t=0)$ и
+$C_y\ (t=0)$ путем подстановки соответствующих начальных или
+статических условий в \eqn{54} и \eqn{55}. Используя $P(\vec
+R,0)$ и $P(\vec R,\theta,\varphi,0)=P(\vec
+R,0)\delta(\cos\theta-\cos\theta_0)\delta(\varphi-\varphi_0)$
+в \eqn{54} и \eqn{55}, а также формулу (II.14), находим
+интенсивности
+$$I_v^v=C_z(0)=AN\overline{P}
+(K,0)\left[\alpha^2+{4\over45}(\alpha_{aa}-\alpha_{bb})^2\right],\noq$$
+$$I_h^v=C_y(0)=AN\overline{P}
+(K,0){1\over15}(\alpha_{aa}-\alpha_{bb})^2.\noq$$
+Таким образом, если падающее излучение поляризовано вдоль оси
+$z$, а наблюдение ведется в плоскости $xy$, отношение
+интенсивностей перпендикулярно и параллельно поляризованного
+света равно
+$$\Delta={I_h^v\over I_v^v}={C_y(0)\over
+C_z(0)}={{1\over15}(\alpha_{aa}-\alpha_{bb})^2\over\alpha^2+{4\over45}(\alpha_{aa}
+-\alpha_{bb})^2}={3(\alpha_{aa}-\alpha_{bb})^2\over45\alpha^2+4(\alpha_{aa}-\alpha_{bb})^2}.\noq$$
+Таким образом, имеем хорошо известное выражение для степени
+деполяризации. Вильсон, Дешиус и Кросс \slit, используя
+аналогичные методы, получили ряд выражений для степени
+деполяризации. Выражения \eqn{59} и \eqn{60} обобщаются на случай
+молекул любого типа путем замены
+$(\alpha_{aa}-\alpha_{bb})^2$ на
+$$\gamma^2={1\over2}\left\{(\alpha_{aa}-\alpha_{bb})^2+(\alpha_{bb}-\alpha_{cc})^2
++(\alpha_{cc}-\alpha_{aa})^2\right\}.$$
+Возвращаясь теперь к формулам \eqn{59} и \eqn{60}, запишем
+$$I_{v}^v=I_{\rm из}+{4\over3}I_{\rm аниз},\hskip 4mm
+I_h^v=I_v^h=I_h^h=I_{\rm аниз}.\noq$$
+Обозначения $I_v^v$ и $I_h^v$ проиллюстрированы на рис. 4.4.1;
+другие типы обозначений $I_{\rm набл}^{\rm пад}$ также
+понятны из геометрической схемы опыта, изображенной на рисунке.
+Выражение для $I_h^h$ легко выводится, причем соответствующая
+корреляционная функция совпадает с \eqn{53} или \eqn{55} с
+заменой произведения $\cos\theta\sin\theta\sin\varphi$ на
+$\sin^2\theta\sin\varphi\cos\varphi$. При этом легко показать,
+что имеет место соотношение \eqn{61} $I_h^h=I_h^v$.
+
+Если падающее излучение неполяризовано, отношение интенсивностей
+перпендикулярно и параллельно поляризованного рассеянного света
+определяется формулой $(I_b^a=I_{\rm набл}^{\rm пад})$
+$${I_h^{\rm неполяриз}\over
+I_v^{\rm неполяриз}}={I_h^v+I_{h}^h\over
+I_v^v+I_v^h}={2I_h^v\over
+I_v^v+I_v^h}={6(\alpha_{aa}-\alpha_{bb})^2\over45\alpha^2+7(\alpha_{aa}-\alpha_{bb})^2}.\noq$$
+
+Вернемся теперь к формулам \eqn{26} и \eqn{27} и повторим
+описанный путь от формул \eqn{50} и \eqn{51} до формул \eqn{54} и
+\eqn{55}, включая учет параллельных колебаний линейной молекулы.
+Подставляя выражения \eqn{35} и \eqn{36} в \eqn{26} и \eqn{27} и
+повторяя приведенный выше анализ тушения вращательных состояний
+[а также используя \eqn{58}], получаем
+$$\eqalign{
+C_z(t)=&A\,\exp(-i\omega_0t)N(\alpha^0)^2\overline{P}
+(K,t)+{4A\over9}\exp(-i\omega_0t)\times\cr
+\times&{N(\alpha^0_{aa}-\alpha_{bb}^0)^2\over4\pi}\overline{P}
+(K,\theta,\varphi,t)+\cr
++&A\exp(-i\omega_0t)\exp(i\omega_{n'_j,n_j}t)\overline{G}
+(K,t)f_j\exp\left(-{t\over\tau_j}\right)+\cr
++{4A\over9}\exp&(-i\omega_0t)\exp(i\omega_{n'_j,n_j}t)\left({N\over4\pi}\right)
+\overline{G}(K,\theta,\varphi,t)h_j\exp\left(-{t\over\tau_j}\right),\cr
+C_y(t)=&A\,\exp(-i\omega_0t){N(\alpha_{aa}^0-\alpha_{bb}^0)^2\over4\pi}\overline{\overline{P}}
+(K,\theta,\varphi,t)+\cr
++A\,\exp&(-i\omega_0t)\exp(i\omega_{n'_j,n_j}t)\left({N\over4\pi}\right)
+\overline{\overline{G}}(K,\theta,\varphi,t)h_j\exp\left(-{t\over\tau_j}\right),\cr
+}$$
+$$\eqalign{
+\overline{P}(K,t)=&\int\limits_{V_s}\exp(i\vec K\cdot\vec
+R)P(\vec R,t)dV_s\cr
+\overline{P}(K,\theta,\varphi,t)=&\int\limits_{0}^{2\pi}\int\limits_{0}^{2\pi}
+\int\limits_{-1}^{1}\int\limits_{-1}^{1}\int\limits_{V_s}\exp(i\vec
+K\cdot\vec R)P_2(\cos\theta_0)P_2(\cos\theta)\times\cr
+\times&P(\vec R,\theta,\varphi,t)dV_sd\cos\theta_0d\cos\theta
+d\varphi_0d\varphi,\cr
+\overline{G}(K,t)=&\int\limits_{V_s}\exp(i\vec K\cdot\vec
+R)G(\vec R,t)dV_s,\cr
+\overline{G}(K,\theta,\varphi,t)=&\int\limits_{0}^{2\pi}\int\limits_{0}^{2\pi}
+\int\limits_{-1}^{1}\int\limits_{-1}^{1}\int\limits_{V_s}\exp(i\vec
+K\cdot\vec R)P_2(\cos\theta_0)P_2(\cos\theta)\times\cr
+\times&G(\vec R,\theta,\varphi,t)dV_sd\cos\theta_0d\cos\theta
+d\varphi_0d\varphi,\cr
+\overline{\overline{P}}(K,\theta,\varphi,t)=&\int\limits_{0}^{2\pi}\int\limits_{0}^{2\pi}
+\int\limits_{-1}^{1}\int\limits_{-1}^{1}\int\limits_{V_s}\exp(i\vec
+K\cdot\vec R)(\cos\theta\sin\theta\sin\varphi)_0\times\cr
+\times&(\cos\theta\sin\theta\sin\varphi)P(\vec
+R,\theta,\varphi,t)dV_sd\cos\theta_0d\cos\theta
+d\varphi_0d\varphi,\cr
+\overline{\overline{G}}(K,\theta,\varphi,t)=&\int\limits_{0}^{2\pi}\int\limits_{0}^{2\pi}
+\int\limits_{-1}^{1}\int\limits_{-1}^{1}\int\limits_{V_s}\exp(i\vec
+K\cdot\vec R)(\cos\theta\sin\theta\sin\varphi)_0\times\cr
+\times&(\cos\theta\sin\theta\sin\varphi)G(\vec
+R,\theta,\varphi,t)dV_sd\cos\theta_0d\cos\theta
+d\varphi_0d\varphi,\cr
+f_j=&{1\over2}N_{n_j}\left[\left({\partial\alpha\over\partial
+Q_j}\right)_0<n_j|Q_j|n'_j>\right]^2,\cr
+h_j=&{1\over2}N_{n_j}\left[\left({\partial(\alpha_{aa}-\alpha_{bb})\over\partial
+Q_j}\right)_0<n_j|Q_j|n'_j>\right]^2,\cr
+\omega_{n'_j,n_j}=&{E_{n'_j}-E_{n_j}\over\hbar}.\cr
+}\noq$$
+Здесь $N_{n_j}$ --- число молекул в состоянии $n_j$. Первые два
+члена в выражении для $C_z(t)$ совпадают с результатом \eqn{54},
+а первый член в выражении для $C_y(t)$ --- с результатом
+\eqn{55}. Остальные члены в этих выражениях обязаны наличию
+параллельных колебаний аксиально-симметричной молекулы
+$(\alpha_{aa}\not=\alpha_{bb}=\alpha_{cc})$. Вероятностные
+функции $P(\vec R,t)$ и $P(\vec R,\theta,\varphi,t)$ и их
+пространственные фурье-образы (включающие усреднение по
+ориентациям) обсуждались ранее. Они содержат как собственные, так
+и различные члены. Функции $G(\vec R,t)$ и $G(\vec
+R,\theta,\varphi,t)$ отличаются от функций
+$P(\vec R,t)$ и $P(\vec R,\theta,\varphi,t)$ тем, что содержат
+лишь собственные члены. Это связано с тем, что различные члены в
+функциях $G$ соответствуют колебаниям пар различных молекул,
+имеющим призвольные фазы относительно друг друга. Таким образом,
+следует ожидать, что различные члены, включающие суммирование по
+парам колеблющихся молекул, обратятся в нуль. Разумеется, если
+исследуется система, в которой различными членами вообще можно
+пренебречь, функции $G$ и $P$ идентичны. В корреляционных
+функциях \eqn{64} учтены также экспоненциальные процессы
+колебательной релаксации, для которых $\tau_j$ --- время
+колебательной релаксации $j$-й нормальной моды. Параметры $f_j,\
+h_j, \omega_{n'_j,n_j}$ и $N_{n'_j,n_j}$ определяются по аналогии
+с \eqn{46} и \eqn{49}.
+
+Возвращаясь к соотношениям \eqn{62}, можно обобщить их с учетом
+членов, соответствующих комбинационному рассеянию
+$$\eqalign{
+I_v^v(\omega)=&I_{\rm из}^P(\omega)+{4\over3}I_{\rm
+аниз}^P(\omega)+I_{\rm из}^K(\omega)+{4\over3}I_{\rm
+аниз}^K(\omega),\cr
+I_h^v(\omega)=&I_v^h(\omega)=I_h^h(\omega)=I_{\rm аниз}^P(\omega)+I_{\rm
+аниз}^K(\omega),\cr
+}\noq$$
+где индексы $P$ и $K$ относятся к рэлеевскому и комбинационному
+рассеянию соответственно.
+
+В последующих разделах мы подробно рассмотрим вид функций
+$\overline{P}(\vec R,t)$, $\overline{P}(\vec R,\theta,\varphi,t),
+\ \overline{G}(\vec R,t)$, $\overline{G}(\vec
+R,\theta,\varphi,t)$,
+$\overline{\overline{P}}(\vec R,\theta,\varphi,t)$ и
+$\overline{\overline{G}}(\vec R,\theta,\varphi,t)$ для различных
+рассеивающих систем в конденсированной фазе.

@@ -1,0 +1,172 @@
+\ifx\numpoint\undefined \catcode`\@=9 \else  \catcode`\@=14  \fi
+@  \global\newcount\numpoint  \global\numpoint=1
+\ifx\numpointo\undefined \catcode`\@=9 \else  \catcode`\@=14  \fi
+@  \global\newcount\numpointo  \global\numpointo=1
+\ifx\mydimx\undefined \catcode`\@=9 \else  \catcode`\@=14  \fi
+@  \newdimen\mydimx
+\ifx\mydimy\undefined \catcode`\@=9 \else  \catcode`\@=14  \fi
+@  \newdimen\mydimy
+\catcode`\@=12
+\def\emmoveto#1#2{\offinterlineskip \hbox to 0 true cm{\vbox to 0
+true cm{\multiply \mydimx by #1 \multiply \mydimy by #2
+\vskip -\mydimy \hskip\mydimx \special{em:point \the\numpoint}\vss}\hss}
+\numpointo=\numpoint \global\advance \numpoint by 1
+\ifnum\numpoint>32760 \global \numpoint 1 \fi
+}
+\def\emlineto#1#2{\offinterlineskip \hbox to 0 true cm{\vbox to 0
+true cm{\multiply \mydimx by #1 \multiply \mydimy by #2
+\vskip -\mydimy \hskip \mydimx  \special{em:point \the\numpoint}\vss}\hss}
+\special{em:line \the\numpointo,\the\numpoint}
+\numpointo=\numpoint  \global\advance \numpoint by 1
+\ifnum\numpoint>32760 \global \numpoint 1 \fi
+}
+\def\emshowto#1#2#3{\offinterlineskip \hbox to 0 true cm{\vbox to 0
+true cm{\multiply \mydimx by #1 \multiply \mydimy by #2
+\vskip - \mydimy \hskip \mydimx \vbox to 0 true cm{\vss\hbox{#3\hss
+}}\vss}\hss
+}}    
+
+%  -------- End of Header ------------ 
+
+\special{em:linewidth 0.8pt}  
+
+\mydimx=0.100000 true mm        \mydimy=0.100000 true mm 
+\vrule width 0 mm height 0 mm depth 21 true mm 
+
+{
+\parindent 0 mm
+
+\emmoveto{250}{120}
+\emlineto{280}{90}
+\emmoveto{280}{150}
+\emlineto{320}{150}
+\emmoveto{280}{90}
+\emlineto{320}{90}
+\emmoveto{320}{150}
+\emlineto{350}{120}
+\emmoveto{320}{90}
+\emlineto{350}{120}
+\emmoveto{250}{120}
+\emlineto{220}{120}
+\emmoveto{130}{160}
+\emlineto{160}{130}
+\emmoveto{160}{110}
+\emlineto{130}{80}
+\emmoveto{350}{120}
+\emlineto{390}{120}
+\emmoveto{250}{120}
+\emlineto{280}{150}
+\emmoveto{326}{133}
+\emlineto{324}{134}
+\emlineto{323}{134}
+\emlineto{321}{135}
+\emlineto{319}{136}
+\emlineto{317}{137}
+\emlineto{315}{137}
+\emlineto{313}{138}
+\emlineto{311}{138}
+\emlineto{309}{139}
+\emlineto{307}{139}
+\emlineto{305}{139}
+\emlineto{303}{139}
+\emlineto{300}{139}
+\emlineto{298}{139}
+\emlineto{296}{139}
+\emlineto{294}{139}
+\emlineto{292}{139}
+\emlineto{289}{139}
+\emlineto{287}{138}
+\emlineto{285}{138}
+\emlineto{283}{137}
+\emlineto{281}{137}
+\emlineto{280}{136}
+\emlineto{278}{135}
+\emlineto{276}{134}
+\emlineto{274}{133}
+\emlineto{273}{133}
+\emlineto{272}{132}
+\emlineto{270}{130}
+\emlineto{269}{129}
+\emlineto{268}{128}
+\emlineto{267}{127}
+\emlineto{266}{126}
+\emlineto{266}{125}
+\emlineto{265}{124}
+\emlineto{265}{122}
+\emlineto{265}{121}
+\emlineto{265}{120}
+\emlineto{265}{118}
+\emlineto{265}{117}
+\emlineto{265}{116}
+\emlineto{266}{115}
+\emlineto{266}{113}
+\emlineto{267}{112}
+\emlineto{268}{111}
+\emlineto{269}{110}
+\emlineto{270}{109}
+\emlineto{271}{108}
+\emlineto{272}{107}
+\emlineto{274}{106}
+\emlineto{275}{105}
+\emlineto{277}{104}
+\emlineto{279}{103}
+\emlineto{281}{103}
+\emlineto{283}{102}
+\emlineto{285}{101}
+\emlineto{287}{101}
+\emlineto{289}{100}
+\emlineto{291}{100}
+\emlineto{293}{100}
+\emlineto{295}{100}
+\emlineto{297}{100}
+\emlineto{300}{100}
+\emlineto{302}{100}
+\emlineto{304}{100}
+\emlineto{306}{100}
+\emlineto{308}{100}
+\emlineto{311}{101}
+\emlineto{313}{101}
+\emlineto{315}{101}
+\emlineto{317}{102}
+\emlineto{319}{103}
+\emlineto{320}{103}
+\emlineto{322}{104}
+\emlineto{324}{105}
+\emlineto{325}{106}
+\emlineto{327}{107}
+\emlineto{328}{108}
+\emlineto{329}{109}
+\emlineto{330}{110}
+\emlineto{331}{111}
+\emlineto{332}{112}
+\emlineto{333}{114}
+\emlineto{334}{115}
+\emlineto{334}{116}
+\emlineto{334}{117}
+\emlineto{334}{119}
+\emlineto{334}{120}
+\emlineto{334}{121}
+\emlineto{334}{122}
+\emlineto{334}{124}
+\emlineto{333}{125}
+\emlineto{333}{126}
+\emlineto{332}{127}
+\emlineto{331}{128}
+\emlineto{330}{130}
+\emlineto{329}{131}
+\emlineto{327}{132}
+\emlineto{326}{133}
+\emshowto{50}{160}{$\rm H_3C$}
+\emshowto{400}{110}{$\rm N=O^-$}
+\emshowto{50}{50}{$\rm H_3C$}
+\emshowto{170}{110}{$\rm N^+$}
+\emshowto{220}{100}{$\cdot$}
+\emshowto{230}{100}{$\cdot$}
+\emshowto{240}{100}{$\cdot$}
+\emshowto{350}{100}{$\cdot$}
+\emshowto{360}{100}{$\cdot$}
+\emshowto{370}{100}{$\cdot$}
+\emshowto{380}{100}{$\cdot$}
+
+}
+

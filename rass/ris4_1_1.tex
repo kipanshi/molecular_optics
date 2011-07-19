@@ -1,0 +1,175 @@
+\ifx\numpoint\undefined \catcode`\@=9 \else  \catcode`\@=14  \fi
+@  \global\newcount\numpoint  \global\numpoint=1
+\ifx\numpointo\undefined \catcode`\@=9 \else  \catcode`\@=14  \fi
+@  \global\newcount\numpointo  \global\numpointo=1
+\ifx\mydimx\undefined \catcode`\@=9 \else  \catcode`\@=14  \fi
+@  \newdimen\mydimx
+\ifx\mydimy\undefined \catcode`\@=9 \else  \catcode`\@=14  \fi
+@  \newdimen\mydimy
+\catcode`\@=12
+\def\emmoveto#1#2{\offinterlineskip \hbox to 0 true cm{\vbox to 0
+true cm{\multiply \mydimx by #1 \multiply \mydimy by #2
+\vskip -\mydimy \hskip\mydimx \special{em:point \the\numpoint}\vss}\hss}
+\numpointo=\numpoint \global\advance \numpoint by 1
+\ifnum\numpoint>32760 \global \numpoint 1 \fi
+}
+\def\emlineto#1#2{\offinterlineskip \hbox to 0 true cm{\vbox to 0
+true cm{\multiply \mydimx by #1 \multiply \mydimy by #2
+\vskip -\mydimy \hskip \mydimx  \special{em:point \the\numpoint}\vss}\hss}
+\special{em:line \the\numpointo,\the\numpoint}
+\numpointo=\numpoint  \global\advance \numpoint by 1
+\ifnum\numpoint>32760 \global \numpoint 1 \fi
+}
+\def\emshowto#1#2#3{\offinterlineskip \hbox to 0 true cm{\vbox to 0
+true cm{\multiply \mydimx by #1 \multiply \mydimy by #2
+\vskip - \mydimy \hskip \mydimx \vbox to 0 true cm{\vss\hbox{#3\hss
+}}\vss}\hss
+}}    
+
+%  -------- End of Header ------------ 
+
+\special{em:linewidth 0.8pt}  
+
+\mydimx=0.100000 true mm        \mydimy=0.100000 true mm 
+\vrule width 0 mm height 0 mm depth 52 true mm 
+
+{
+\parindent 0 mm
+
+\emmoveto{50}{310}
+\emlineto{920}{310}
+\emmoveto{100}{310}
+\emlineto{80}{320}
+\emmoveto{100}{310}
+\emlineto{80}{300}
+\emmoveto{490}{380}
+\emlineto{490}{240}
+\emmoveto{490}{240}
+\emlineto{630}{240}
+\emmoveto{490}{380}
+\emlineto{630}{380}
+\emmoveto{630}{380}
+\emlineto{630}{240}
+\emmoveto{840}{310}
+\emlineto{820}{300}
+\emmoveto{560}{310}
+\emlineto{730}{50}
+\emmoveto{730}{50}
+\emlineto{720}{80}
+\emmoveto{730}{50}
+\emlineto{700}{70}
+\emmoveto{840}{310}
+\emlineto{820}{320}
+\emmoveto{660}{150}
+\emlineto{690}{160}
+\emmoveto{660}{150}
+\emlineto{680}{170}
+\emmoveto{665}{152}
+\emlineto{666}{153}
+\emlineto{668}{154}
+\emlineto{669}{155}
+\emlineto{671}{156}
+\emlineto{672}{157}
+\emlineto{674}{158}
+\emlineto{675}{159}
+\emlineto{677}{160}
+\emlineto{678}{161}
+\emlineto{680}{162}
+\emlineto{681}{163}
+\emlineto{682}{164}
+\emlineto{684}{165}
+\emlineto{685}{166}
+\emlineto{687}{168}
+\emlineto{688}{169}
+\emlineto{689}{170}
+\emlineto{691}{171}
+\emlineto{692}{172}
+\emlineto{693}{174}
+\emlineto{694}{175}
+\emlineto{696}{176}
+\emlineto{697}{177}
+\emlineto{698}{179}
+\emlineto{699}{180}
+\emlineto{701}{181}
+\emlineto{702}{183}
+\emlineto{703}{184}
+\emlineto{704}{185}
+\emlineto{705}{187}
+\emlineto{707}{188}
+\emlineto{708}{190}
+\emlineto{709}{191}
+\emlineto{710}{193}
+\emlineto{711}{194}
+\emlineto{712}{196}
+\emlineto{713}{197}
+\emlineto{714}{199}
+\emlineto{715}{200}
+\emlineto{716}{202}
+\emlineto{717}{203}
+\emlineto{718}{205}
+\emlineto{719}{206}
+\emlineto{720}{208}
+\emlineto{721}{210}
+\emlineto{722}{211}
+\emlineto{723}{213}
+\emlineto{724}{214}
+\emlineto{725}{216}
+\emlineto{725}{218}
+\emlineto{726}{219}
+\emlineto{727}{221}
+\emlineto{728}{223}
+\emlineto{729}{225}
+\emlineto{729}{226}
+\emlineto{730}{228}
+\emlineto{731}{230}
+\emlineto{732}{232}
+\emlineto{732}{233}
+\emlineto{733}{235}
+\emlineto{734}{237}
+\emlineto{734}{239}
+\emlineto{735}{240}
+\emlineto{735}{242}
+\emlineto{736}{244}
+\emlineto{737}{246}
+\emlineto{737}{248}
+\emlineto{738}{250}
+\emlineto{738}{251}
+\emlineto{739}{253}
+\emlineto{739}{255}
+\emlineto{740}{257}
+\emlineto{740}{259}
+\emlineto{740}{261}
+\emlineto{741}{263}
+\emlineto{741}{264}
+\emlineto{742}{266}
+\emlineto{742}{268}
+\emlineto{742}{270}
+\emlineto{742}{272}
+\emlineto{743}{274}
+\emlineto{743}{276}
+\emlineto{743}{278}
+\emlineto{743}{280}
+\emlineto{744}{282}
+\emlineto{744}{284}
+\emlineto{744}{285}
+\emlineto{744}{287}
+\emlineto{744}{289}
+\emlineto{744}{291}
+\emlineto{744}{293}
+\emlineto{744}{295}
+\emlineto{744}{297}
+\emlineto{744}{299}
+\emlineto{744}{301}
+\emlineto{744}{303}
+\emlineto{744}{305}
+\emlineto{744}{307}
+\emlineto{744}{309}
+\emshowto{780}{230}{$\Theta$ угол рассеяния}
+\emshowto{120}{360}{Падающий пучок}
+\emshowto{770}{130}{$\vec K$ рассеянный пучок}
+\emshowto{80}{230}{$K_0$ - волновое число}
+\emshowto{80}{180}{$\vec K_0$}
+\emshowto{820}{340}{$x$}
+
+}
+

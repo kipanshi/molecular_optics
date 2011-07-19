@@ -1,0 +1,177 @@
+\ifx\numpoint\undefined \catcode`\@=9 \else  \catcode`\@=14  \fi
+@  \global\newcount\numpoint  \global\numpoint=1
+\ifx\numpointo\undefined \catcode`\@=9 \else  \catcode`\@=14  \fi
+@  \global\newcount\numpointo  \global\numpointo=1
+\ifx\mydimx\undefined \catcode`\@=9 \else  \catcode`\@=14  \fi
+@  \newdimen\mydimx
+\ifx\mydimy\undefined \catcode`\@=9 \else  \catcode`\@=14  \fi
+@  \newdimen\mydimy
+\catcode`\@=12
+\def\emmoveto#1#2{\offinterlineskip \hbox to 0 true cm{\vbox to 0
+true cm{\multiply \mydimx by #1 \multiply \mydimy by #2
+\vskip -\mydimy \hskip\mydimx \special{em:point \the\numpoint}\vss}\hss}
+\numpointo=\numpoint \global\advance \numpoint by 1
+\ifnum\numpoint>32760 \global \numpoint 1 \fi
+}
+\def\emlineto#1#2{\offinterlineskip \hbox to 0 true cm{\vbox to 0
+true cm{\multiply \mydimx by #1 \multiply \mydimy by #2
+\vskip -\mydimy \hskip \mydimx  \special{em:point \the\numpoint}\vss}\hss}
+\special{em:line \the\numpointo,\the\numpoint}
+\numpointo=\numpoint  \global\advance \numpoint by 1
+\ifnum\numpoint>32760 \global \numpoint 1 \fi
+}
+\def\emshowto#1#2#3{\offinterlineskip \hbox to 0 true cm{\vbox to 0
+true cm{\multiply \mydimx by #1 \multiply \mydimy by #2
+\vskip - \mydimy \hskip \mydimx \vbox to 0 true cm{\vss\hbox{#3\hss
+}}\vss}\hss
+}}    
+
+%  -------- End of Header ------------ 
+
+\special{em:linewidth 0.8pt}  
+
+\mydimx=0.100000 true mm        \mydimy=0.100000 true mm 
+\vrule width 0 mm height 0 mm depth 49 true mm 
+
+{
+\parindent 0 mm
+
+\emmoveto{50}{90}
+\emlineto{680}{90}
+\emmoveto{120}{130}
+\emlineto{128}{131}
+\emlineto{136}{133}
+\emlineto{144}{134}
+\emlineto{152}{136}
+\emlineto{161}{138}
+\emlineto{169}{140}
+\emlineto{177}{142}
+\emlineto{185}{145}
+\emlineto{192}{147}
+\emlineto{200}{150}
+\emlineto{208}{154}
+\emlineto{215}{157}
+\emlineto{223}{161}
+\emlineto{230}{166}
+\emlineto{237}{171}
+\emlineto{244}{176}
+\emlineto{251}{181}
+\emlineto{257}{187}
+\emlineto{263}{193}
+\emlineto{269}{199}
+\emlineto{275}{205}
+\emlineto{281}{212}
+\emlineto{286}{218}
+\emlineto{291}{225}
+\emlineto{295}{232}
+\emlineto{299}{239}
+\emlineto{303}{246}
+\emlineto{306}{253}
+\emlineto{310}{260}
+\emlineto{313}{267}
+\emlineto{315}{275}
+\emlineto{318}{282}
+\emlineto{320}{290}
+\emlineto{322}{298}
+\emlineto{325}{306}
+\emlineto{327}{314}
+\emlineto{329}{322}
+\emlineto{332}{331}
+\emlineto{334}{340}
+\emlineto{337}{349}
+\emlineto{339}{359}
+\emlineto{342}{369}
+\emlineto{346}{379}
+\emlineto{349}{389}
+\emlineto{352}{398}
+\emlineto{356}{406}
+\emlineto{360}{412}
+\emlineto{364}{417}
+\emlineto{368}{419}
+\emlineto{371}{419}
+\emlineto{375}{417}
+\emlineto{379}{412}
+\emlineto{383}{406}
+\emlineto{387}{398}
+\emlineto{390}{389}
+\emlineto{393}{379}
+\emlineto{397}{369}
+\emlineto{400}{359}
+\emlineto{402}{349}
+\emlineto{405}{340}
+\emlineto{407}{331}
+\emlineto{410}{322}
+\emlineto{412}{314}
+\emlineto{414}{306}
+\emlineto{417}{298}
+\emlineto{419}{290}
+\emlineto{421}{282}
+\emlineto{424}{275}
+\emlineto{426}{267}
+\emlineto{429}{260}
+\emlineto{433}{253}
+\emlineto{436}{246}
+\emlineto{440}{239}
+\emlineto{444}{232}
+\emlineto{448}{225}
+\emlineto{453}{218}
+\emlineto{458}{212}
+\emlineto{464}{205}
+\emlineto{470}{199}
+\emlineto{476}{193}
+\emlineto{482}{187}
+\emlineto{488}{181}
+\emlineto{495}{176}
+\emlineto{502}{171}
+\emlineto{509}{166}
+\emlineto{516}{161}
+\emlineto{524}{157}
+\emlineto{531}{154}
+\emlineto{539}{150}
+\emlineto{547}{147}
+\emlineto{554}{145}
+\emlineto{562}{142}
+\emlineto{570}{140}
+\emlineto{578}{138}
+\emlineto{587}{136}
+\emlineto{595}{134}
+\emlineto{603}{133}
+\emlineto{611}{131}
+\emlineto{620}{130}
+\emmoveto{370}{440}
+\emlineto{370}{390}
+\emmoveto{370}{360}
+\emlineto{370}{310}
+\emmoveto{370}{280}
+\emlineto{370}{220}
+\emmoveto{370}{180}
+\emlineto{370}{90}
+\emmoveto{310}{260}
+\emlineto{430}{260}
+\emmoveto{310}{260}
+\emlineto{330}{270}
+\emmoveto{310}{260}
+\emlineto{330}{250}
+\emmoveto{430}{260}
+\emlineto{410}{270}
+\emmoveto{430}{260}
+\emlineto{410}{250}
+\emmoveto{310}{260}
+\emlineto{310}{220}
+\emmoveto{310}{210}
+\emlineto{310}{170}
+\emmoveto{310}{150}
+\emlineto{310}{90}
+\emmoveto{430}{260}
+\emlineto{430}{220}
+\emmoveto{430}{210}
+\emlineto{430}{170}
+\emmoveto{430}{150}
+\emlineto{430}{90}
+\emshowto{340}{280}{$\gamma$}
+\emshowto{280}{50}{$\omega_{-{1\over2}}$}
+\emshowto{360}{50}{$\omega_0$}
+\emshowto{440}{50}{$\omega_{1\over2}$}
+
+}
+

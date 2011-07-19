@@ -1,0 +1,21 @@
+\input epsf
+\tolerance 900
+\overfullrule 0 mm
+\font\big=cmr10 scaled \magstep2
+\font\prgf=cmr10 scaled \magstep1
+\font\fpar=cmmi10 scaled \magstep1
+\newcount\npar
+\npar 1
+\def\prgaf#1{\vskip 5 mm \hfil{\fpar\S \prgf \the\npar .
+#1 }\hfill\advance\npar by 1 \vskip 2 mm}
+\centerline{ \big Глава V}\par
+\centerline{\big Электрооптические явления.}
+\input par_1_3.tex
+\eject
+\input par_4.tex
+\input par_5.tex
+\input par_6.tex
+\input par_7.tex
+\eject
+\input par_8_9.tex
+\bye

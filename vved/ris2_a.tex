@@ -1,0 +1,139 @@
+\ifx\numpoint\undefined \catcode`\@=9 \else  \catcode`\@=14  \fi
+@  \global\newcount\numpoint  \global\numpoint=1
+\ifx\numpointo\undefined \catcode`\@=9 \else  \catcode`\@=14  \fi
+@  \global\newcount\numpointo  \global\numpointo=1
+\ifx\mydimx\undefined \catcode`\@=9 \else  \catcode`\@=14  \fi
+@  \newdimen\mydimx
+\ifx\mydimy\undefined \catcode`\@=9 \else  \catcode`\@=14  \fi
+@  \newdimen\mydimy
+\catcode`\@=12
+\def\emmoveto#1#2{\offinterlineskip \hbox to 0 true cm{\vbox to 0
+true cm{\multiply \mydimx by #1 \multiply \mydimy by #2
+\vskip -\mydimy \hskip\mydimx \special{em:point \the\numpoint}\vss}\hss}
+\numpointo=\numpoint \global\advance \numpoint by 1
+\ifnum\numpoint>32760 \global \numpoint 1 \fi
+}
+\def\emlineto#1#2{\offinterlineskip \hbox to 0 true cm{\vbox to 0
+true cm{\multiply \mydimx by #1 \multiply \mydimy by #2
+\vskip -\mydimy \hskip \mydimx  \special{em:point \the\numpoint}\vss}\hss}
+\special{em:line \the\numpointo,\the\numpoint}
+\numpointo=\numpoint  \global\advance \numpoint by 1
+\ifnum\numpoint>32760 \global \numpoint 1 \fi
+}
+\def\emshowto#1#2#3{\offinterlineskip \hbox to 0 true cm{\vbox to 0
+true cm{\multiply \mydimx by #1 \multiply \mydimy by #2
+\vskip - \mydimy \hskip \mydimx \vbox to 0 true cm{\vss\hbox{#3\hss
+}}\vss}\hss
+}}    
+
+%  -------- End of Header ------------ 
+
+\special{em:linewidth 0.8pt}  
+
+\mydimx=0.100000 true mm        \mydimy=0.100000 true mm 
+\vrule width 0 mm height 0 mm depth 38 true mm 
+
+{
+\parindent 0 mm
+
+\emmoveto{750}{310}
+\emlineto{750}{270}
+\emmoveto{750}{310}
+\emlineto{770}{330}
+\emmoveto{770}{330}
+\emlineto{790}{310}
+\emmoveto{750}{270}
+\emlineto{770}{250}
+\emmoveto{790}{310}
+\emlineto{790}{270}
+\emmoveto{790}{270}
+\emlineto{770}{250}
+\emmoveto{790}{310}
+\emlineto{810}{330}
+\emmoveto{810}{330}
+\emlineto{830}{310}
+\emmoveto{830}{310}
+\emlineto{830}{270}
+\emmoveto{790}{270}
+\emlineto{810}{250}
+\emmoveto{830}{270}
+\emlineto{810}{250}
+\emmoveto{730}{210}
+\emlineto{730}{170}
+\emmoveto{770}{210}
+\emlineto{770}{170}
+\emmoveto{810}{210}
+\emlineto{810}{170}
+\emmoveto{850}{210}
+\emlineto{850}{170}
+\emmoveto{730}{170}
+\emlineto{750}{150}
+\emmoveto{770}{170}
+\emlineto{750}{150}
+\emmoveto{750}{230}
+\emlineto{730}{210}
+\emmoveto{750}{230}
+\emlineto{770}{210}
+\emmoveto{790}{230}
+\emlineto{770}{210}
+\emmoveto{790}{230}
+\emlineto{810}{210}
+\emmoveto{810}{210}
+\emlineto{830}{230}
+\emmoveto{830}{230}
+\emlineto{850}{210}
+\emmoveto{810}{170}
+\emlineto{830}{150}
+\emmoveto{850}{170}
+\emlineto{830}{150}
+\emmoveto{770}{170}
+\emlineto{790}{150}
+\emmoveto{810}{170}
+\emlineto{790}{150}
+\emmoveto{770}{90}
+\emlineto{810}{90}
+\emmoveto{770}{130}
+\emlineto{810}{130}
+\emmoveto{750}{110}
+\emlineto{770}{130}
+\emmoveto{750}{110}
+\emlineto{770}{90}
+\emmoveto{810}{130}
+\emlineto{830}{110}
+\emmoveto{830}{110}
+\emlineto{810}{90}
+\emmoveto{710}{110}
+\emlineto{750}{110}
+\emmoveto{710}{110}
+\emlineto{690}{90}
+\emmoveto{690}{90}
+\emlineto{710}{70}
+\emmoveto{710}{70}
+\emlineto{750}{70}
+\emmoveto{750}{70}
+\emlineto{770}{90}
+\emmoveto{750}{70}
+\emlineto{770}{50}
+\emmoveto{770}{50}
+\emlineto{810}{50}
+\emmoveto{810}{90}
+\emlineto{830}{70}
+\emmoveto{830}{70}
+\emlineto{810}{50}
+\emmoveto{830}{110}
+\emlineto{870}{110}
+\emmoveto{830}{70}
+\emlineto{870}{70}
+\emmoveto{870}{110}
+\emlineto{890}{90}
+\emmoveto{870}{70}
+\emlineto{890}{90}
+\emshowto{50}{280}{для нафталина}
+\emshowto{50}{180}{для адреналина}
+\emshowto{50}{80}{для пирена}
+\emshowto{360}{280}{$\Delta R=2,55$}
+\emshowto{360}{180}{$\Delta R=8,17$}
+\emshowto{360}{80}{$\Delta R=8,03$}
+
+}
+

@@ -1,0 +1,81 @@
+\ifx\numpoint\undefined \catcode`\@=9 \else  \catcode`\@=14  \fi
+@  \global\newcount\numpoint  \global\numpoint=1
+\ifx\numpointo\undefined \catcode`\@=9 \else  \catcode`\@=14  \fi
+@  \global\newcount\numpointo  \global\numpointo=1
+\ifx\mydimx\undefined \catcode`\@=9 \else  \catcode`\@=14  \fi
+@  \newdimen\mydimx
+\ifx\mydimy\undefined \catcode`\@=9 \else  \catcode`\@=14  \fi
+@  \newdimen\mydimy
+\catcode`\@=12
+\def\emmoveto#1#2{\offinterlineskip \hbox to 0 true cm{\vbox to 0
+true cm{\multiply \mydimx by #1 \multiply \mydimy by #2
+\vskip -\mydimy \hskip\mydimx \special{em:point \the\numpoint}\vss}\hss}
+\numpointo=\numpoint \global\advance \numpoint by 1
+\ifnum\numpoint>32760 \global \numpoint 1 \fi
+}
+\def\emlineto#1#2{\offinterlineskip \hbox to 0 true cm{\vbox to 0
+true cm{\multiply \mydimx by #1 \multiply \mydimy by #2
+\vskip -\mydimy \hskip \mydimx  \special{em:point \the\numpoint}\vss}\hss}
+\special{em:line \the\numpointo,\the\numpoint}
+\numpointo=\numpoint  \global\advance \numpoint by 1
+\ifnum\numpoint>32760 \global \numpoint 1 \fi
+}
+\def\emshowto#1#2#3{\offinterlineskip \hbox to 0 true cm{\vbox to 0
+true cm{\multiply \mydimx by #1 \multiply \mydimy by #2
+\vskip - \mydimy \hskip \mydimx \vbox to 0 true cm{\vss\hbox{#3\hss
+}}\vss}\hss
+}}    
+
+%  -------- End of Header ------------ 
+
+\special{em:linewidth 0.8pt}  
+
+\mydimx=0.100000 true mm        \mydimy=0.100000 true mm 
+\vrule width 0 mm height 0 mm depth 28 true mm 
+
+{
+\parindent 0 mm
+
+\emmoveto{350}{190}
+\emlineto{380}{220}
+\emmoveto{350}{190}
+\emlineto{380}{160}
+\emmoveto{380}{220}
+\emlineto{430}{220}
+\emmoveto{380}{160}
+\emlineto{430}{160}
+\emmoveto{430}{220}
+\emlineto{460}{190}
+\emmoveto{430}{160}
+\emlineto{460}{190}
+\emmoveto{460}{190}
+\emlineto{490}{190}
+\emmoveto{580}{230}
+\emlineto{550}{200}
+\emmoveto{550}{180}
+\emlineto{580}{150}
+\emmoveto{430}{110}
+\emlineto{380}{110}
+\emmoveto{380}{110}
+\emlineto{350}{80}
+\emmoveto{430}{110}
+\emlineto{460}{80}
+\emmoveto{350}{80}
+\emlineto{380}{50}
+\emmoveto{380}{50}
+\emlineto{430}{50}
+\emmoveto{460}{80}
+\emlineto{430}{50}
+\emmoveto{460}{80}
+\emlineto{490}{80}
+\emshowto{500}{70}{$\rm N^+=O^-$}
+\emshowto{500}{180}{$\rm N^+$}
+\emshowto{590}{230}{$\rm CH_3$}
+\emshowto{590}{130}{$\rm CH_3$}
+\emshowto{50}{180}{Диметиланилин}
+\emshowto{50}{70}{Нитробензол}
+\emshowto{710}{180}{имеет $p=1,58$ D}
+\emshowto{710}{70}{имеет $p=3,18$ D}
+
+}
+

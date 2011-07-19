@@ -1,0 +1,103 @@
+\documentclass[dvipdfm,twoside,12pt]{article}
+\usepackage{mathtext}
+
+\usepackage[T2A]{fontenc}
+
+\DeclareSymbolFont{T2Aletters}{T2A}{cmr}{m}{n}
+
+\usepackage{latexsym}
+\usepackage{graphicx}
+
+\usepackage [cp866]{inputenc}
+\usepackage [russian]{babel}
+\usepackage{type1ec}
+\usepackage{letterspacing}
+\usepackage{array}
+\usepackage{diser}
+\usepackage{fancyhdr}
+\usepackage{makeidx}
+\usepackage{multicol}
+%\usepackage{soul}
+%\makeindex
+
+\pagestyle{fancy}
+
+%\fancypagestyle
+
+\def\col#1{\fancyhead[LE]{\pragn{10}{10}#1}
+\fancyhead[LO]{\pragn{10}{10}#1}}
+\fancyhf{}
+%\fancyhf{} %\fancyhead[LE]{\pragn{9}{10}Дни Науки 2006}
+%\fancyhead[RO]{\pragn{9}{10}Название статьи}
+\fancyhead[RE]{\hfil\hbox{%\raise 3mm
+\hbox{\pragb{11}{10}\thepage}}}
+\fancyhead[RO]{\hfil\hbox{%\raise3mm
+\hbox{\pragb{11}{10}\thepage}}}
+%\renewcommand{\headrulewidth}{0pt}
+\begin{document}
+
+\def\lit{\vskip 4mm\noindent{\pragb{16}{12}Литература}}
+\newcount\eqnum \eqnum 0
+\def\noq{\global\advance\eqnum by 1\eqno\hbox{(\the\eqnum)}}
+\newcount\sectn
+\def\sect#1{\newpage\global\advance\sectn by 1\noindent
+{\pragb{15}{18}\the\sectn. #1}\vskip-5mm}
+\def\angst{\hbox{\hbox{A}\hskip -2,08 mm \raise 1,5 mm\hbox{$^\circ$}}}
+\def\exp{\hbox{exp}}
+
+\renewcommand{\No}{{\char185}}
+
+%********** From Diplom.tex
+
+\newcount\npar
+\newcount\nglav
+\nglav 0
+\npar 0
+\def\eqn#1{(#1)}
+
+\def\prgaf#1{\global\advance\npar by 1\vskip 5 mm
+\hfil{\prgf\par\noindent\the\nglav.\the\npar .
+#1 }\hfill}
+\def\glava#1{\global\advance\nglav by
+1\vfil\eject\noindent\hfil{\glv Глава\
+\the\nglav.\ #1}\hfill}
+
+
+\def\depotn{${R_{\rm деп}^{2}(t)\rho_{19}(n_{19}^2+2)^2\over
+R_{\rm деп}^2(19)\rho_{t}(n_t^2+2)^2}$}
+\def\sodp#1#2{\parshape 2 0.8cm 13.2cm 1.6cm 14.4cm\noindent #1\leaders\hbox{\
+.}\hfill\hbox to 2cm {\hfil #2}}
+\def\sodg#1#2{\parshape 1 0cm 16cm \noindent #1\leaders\hbox{\
+.}\hfill\hbox to 2cm {\hfil #2}}
+\def\sods#1#2{\parshape 1 0.8cm 15.2cm \noindent #1\leaders\hbox{\
+.}\hfill\hbox to 2cm {\hfil #2}}
+
+%***********
+
+
+
+\input macro_a4.tex
+
+\nwtn{12}{15}
+
+
+
+
+
+\pagestyle{empty}\input TITLE.tex
+
+\newpage\pagestyle{fancy}\input vved.tex
+\newpage\input 1.tex
+\newpage\input THEORY.tex
+\newpage\input 2.tex
+\input 3.tex
+\input pp.tex
+\newpage\input biblio.tex
+
+%\input doklad.tex
+
+%\input slides.tex
+
+
+
+\end{document}

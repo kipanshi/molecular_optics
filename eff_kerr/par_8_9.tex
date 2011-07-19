@@ -1,0 +1,98 @@
+\prgaf{Явление Керра в переменном поле (неполярные жидкости).}
+В переменном поле $E=E_0\cos wt$ задача сводится к решению
+уравнения (5.48):
+$${1\over {\cal D}}\cdot {\partial\Phi\over\partial
+t}={1\over\sin\Theta}{\partial\over\partial\Theta}\left(\sin\Theta{\partial\Phi\over\partial\Theta}\right)+
+{\Phi\over
+KT}{1\over\sin\Theta}{\partial\over\partial\Theta}\left(\sin\Theta{\partial
+U\over\partial\Theta}\right)+{1\over KT}\cdot
+{\partial\Phi\over\partial\Theta}{\partial U\over\partial\Theta}$$
+\par Как мы видели для энергии молекулы в электрическом поле
+справедливо выражение (5.49):
+$$U=-{E^2\over2}(a_{\parallel}-a_{\perp})\cos^2\Theta$$
+$$E^2=E_0^2\cos^2wt=E_0^2{1+\cos2wt\over2}$$
+$$U=-{E_0^2\over2}(a_{\parallel}-a_{\perp})\cos^2\Theta{1+cos2wt\over2}$$
+\par Перепишем уравнение диффузии (5.48) в разв\"ернутом виде:
+$${1\over {\cal D}}\cdot {\partial\Phi\over\partial
+t}={\cos\Theta\over\sin\Theta}{\partial\Phi\over\partial
+t}+{\partial^2\Phi\over\partial\Theta^2}+{\Phi\over
+KT}\left({\cos\Theta\over\sin\Theta}{\partial
+U\over\partial\Theta}+{\partial^2
+U\over\partial\Theta^2}\right)+{1\over KT}{\partial
+U\over\partial\Theta}\cdot {\partial\Phi\over\partial\Theta}=$$
+$$={\cos\Theta\over\sin\Theta}\cdot
+{\partial\Phi\over\partial\Theta}+{\partial^2\Phi\over\partial\Theta^2}+{E_0^2\over
+KT}(a_{\parallel}-a_{\perp}){1+cos2wt\over2}\left\{(\cos^2\Theta+\cos2\Theta)
+\Phi+{\sin2\Theta\over2}\cdot
+{\partial\Phi\over\partial\Theta}\right\}$$
+\par заменяя $\cos2\Theta$ на $(2\cos^2\Theta-1)$ получим:
+$${1\over {\cal D}}\cdot {\partial\Phi\over\partial t}=
+{\cos\Theta\over\sin\Theta}{\partial\Phi\over\partial\Theta}+
+{\partial^2\Phi\over\partial\Theta^2}+{E_0^2\over
+KT}(a_{\parallel}-a_{\perp}){1+\cos2wt\over2}\times\left\{(3\cos^2\Theta
+-1)+{\sin2\Theta\over2}{\partial\Phi\over\partial\Theta}\right\}
+\eqno (5.59)$$
+\par Решение этого уравнения сводится к нахождению функции
+$\Phi$. В случае постоянного поля
+$$\Phi={1\over
+4\pi}left[1+{E^2\over2KT}(a_{\parallel}-a_{\perp})\left(\cos^2\Theta-{1\over3}\right)
+\eqno (5.54)$$
+\par При переменном поле функция $\Phi$ будет отставать по фазе
+от мгновенного значения поля, что прилед\"ет и к изменению
+амплитуды. Подставим в (5.54) вместо $E^2=E_0^2{1+\cos2wt\over2}$
+выражение
+$E^2=E_0^2{A+B\cos(2wt-\delta)\over2}$:
+$$\Phi={1\over4\pi}\left\{1+{E_0^2\over2KT}{A+B\cos(2wt-\delta)\over2}(a_{\parallel}-a_{\perp})
+\left(\cos^2\Theta-{1\over3}\right)\right\} \eqno (5.60)$$
+\par Для определения $A,\ B$ и $\delta$ подставим $\Phi$ и е\"е
+производные по $t$ и $\Theta$ в формулу (5.59). Сравнивая члены с
+одинаковой зависимостью от времени и учитывая условие
+${a_{\parallel}-a_{\perp}\over2KT}E_0^2<<KT$, находим:
+$$A=1;\hskip 3 mm B={1\over\sqrt{1+w^2\tau_k^2}};\hskip 3 mm
+\hbox{tg}\delta=w\tau_k,\ \left(\tau_k={1\over6{\cal D}}\right) \eqno (5.61)$$
+\par Окончательно для функции $\Phi$ имеем:
+$$\Phi={1\over4\pi}\left\{1+\left[1+{\cos(2wt-\delta)\over\sqrt{1+
+w^2\tau_k^2}}\right]{E_0^2\over4KT}(a_{\parallel}-a_{\perp})\left(\cos^2\Theta
+-{1\over3}\right)\right\}\eqno (5.62)$$
+\par С помощью $5.62$ можно рассчитать постоянную Керра.
+Она оказывается пропорциональной переменной части этой функции:
+$${\cal K}^*={\cal
+K}\left\{1+{\cos(2wt-\delta)\over\sqrt{1+w^2\tau_k^2}}\right\}\eqno
+(5.63)$$
+${\cal K}^*$ --- мговенное значение постоянной Керра. Это
+функциональная зависимость. Мгновенное значение меняется с
+удвоенной частотой $2w$. Величина $\cos(2wt-\delta)$ изменяется
+при заданной частоте $w$ от (+1) до (-1) и мгновенное значение
+постоянной Керра в пределах
+$${\cal K}_+^*={\cal
+K}\left\{1+{1\over\sqrt{1+w^2\tau_k^2}}\right\};\hskip 3 mm{\cal K}_-^*={\cal
+K}\left\{1-{1\over\sqrt{1+w^2\tau_k^2}}\right\}\eqno (5.64)$$
+\par При низких частотах $w\tau_k<<1$, ${\cal K}$ изменяется от
+${\cal K}_+^*=2{\cal K}$ до ${\cal K}_-^*=0$, а при высоких
+частотах, когда $w\tau_k\rightarrow\infty$, ${\cal K}_+^*={\cal
+K}_-^*={\cal K}$. На опыте измеряется не мгновенное значение
+${\cal K}$, а е\"е среднее значение, которое оста\"ется
+неизменным при всех частотах:
+$${{\cal K}_-^*+{\cal K}_+^*\over2}={\cal K}$$
+\prgaf{Явление Керра в переменном поле.}
+Для полярных жидкостей зависимость ${\cal K}$ от частоты имеет
+более сложный вид. Поэтому мы можем охарактеризовать это явление
+качественно. При переходе от постоянного поля к переменному
+низкой частоты, ${\cal K}$ должна оставаться неизменной, только в
+случае переменного поля $E^2\rightarrow E_{\hbox{эфф}}^2={E_0^2\over2}$
+($E_0$ --- амплитудное значение напряж\"енности поля).
+Независимость ${\cal K}$ от частоты с е\"е повышеннием будет
+сохраняться вплоть до значения близкого к частоте диэлектрической
+релаксации ${1\over\tau_{\cal D}}$, с приближением к этому
+значению ${\cal K}$ будет падать. Для полярных жидкостей ${\cal
+K}={\cal K}_1+{\cal K}_2$; начн\"ет убывать слагаемое, связанное
+с дипольным моментом, а связанное со статической поляризуемостью
+оста\"ется неизменным. При повышении частоты ${\cal K}_2$
+превратится в $0$, а останется только слагаемое, зависящее от
+анизотропии поляризуемости молекул.\par
+\vskip 5 mm
+here will be a plot
+\vskip 5 mm
+\par $\tau_{\cal D}=10^{-10}$ ${\cal K}$ мало зависит от частоты $\nu$
+приложенного поля, --- это может быть и поле световой волны, -
+оптический эффект Керра.

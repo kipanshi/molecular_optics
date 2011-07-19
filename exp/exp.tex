@@ -1,0 +1,77 @@
+\tolerance 900
+\font\tabb=cmr8
+\font\mbold=cmmib10
+\font\Glv=cmbx10 scaled \magstep3
+\font\glv=cmbx10 scaled \magstep2
+\font\prgf=cmbx10 scaled \magstep1
+\font\ris=cmr9
+\font\riss=cmr7
+\font\risit=cmti7
+\font\tab=cmti8
+\font\big=cmbx10 scaled \magstep2
+\font\mitsm=cmmi7
+\newcount\npar
+\newcount\numq
+\newcount\nglav
+\newcount\nrazd
+\nglav 0
+\npar 0
+\numq 0
+\nrazd 0
+\def\ra{${I\over I_s}={\pi r_s^2\over\pi
+r^2}{\theta_2^2\over\theta_1^2}=\left(1-{b(n-1)^2\over r\cdot
+n}\right)^2n^2$}
+\def\rb{$C_v=1-{b(a+l)/r-b\over2\left[nl+b{a+l\over r-b}\right]};$}
+\def\rc{$b\ll r:\ C_v\rightarrow1$}
+\def\D{\hbox{\hbox{\ris l}\hskip-0,9mm\raise 0,22mm\hbox{$\supset$}}}
+\def\flrd{{1\over2\pi\nu_{\tau}}=6,6\cdot10^{-11}{\rm с}}
+\def\txxi{$\cos\varphi\cos\vartheta\cos\psi-\sin\varphi\sin\psi$}
+\def\tyxi{$\sin\varphi\cos\vartheta\cos\psi+\cos\varphi\sin\psi$}
+\def\txnu{$-\cos\varphi\cos\vartheta\sin\psi-\sin\varphi\cos\psi$}
+\def\tynu{$-\sin\varphi\cos\vartheta\sin\psi+\cos\varphi\cos\psi$}
+\def\txzeta{$\cos\varphi\sin\vartheta$}
+\def\tyzeta{$\sin\varphi\sin\vartheta$}
+\def\tzzeta{$\cos\vartheta$}
+\def\tzxi{$-\sin\vartheta\cos\psi$}
+\def\tznu{$\sin\vartheta\sin\psi$}
+\def\eqn#1{(\the\nrazd.#1)}
+\def\noq{\global\advance\numq by 1\eqno(\the\nrazd.\the\numq)}
+\def\exp{{\rm exp}}
+\def\rot{{\rm rot}}
+\def\diverg{{\rm div}}
+\def\grad{{\rm grad}}
+\def\razd#1{\global\advance\nrazd by 1\vskip 5mm
+\hfil{\glv\par\noindent\S\the\nrazd. #1}\hfill}
+\def\prgaf#1{\global\advance\npar by 1\vskip 5 mm
+\hfil{\prgf\par\noindent\the\nrazd.\the\npar .
+#1 }\hfill}
+\def\glava#1{\global\advance\nglav by
+1\vfil\eject\noindent{\Glv Глава\
+\the\nglav\vskip 4mm\par\noindent #1}\hfill}
+\def\angst{\hbox{\hbox{A}\hskip -2,08 mm \raise 1,5 mm\hbox{$^\circ$}}}
+\def\sodp#1#2{\parshape 2 0.8cm 13.2cm 1.6cm 14.4cm\noindent #1\leaders\hbox{\
+.}\hfill\hbox to 2cm {\hfil #2}}
+\def\sodg#1#2{\parshape 1 0cm 16cm \noindent #1\leaders\hbox{\
+.}\hfill\hbox to 2cm {\hfil #2}}
+\def\sods#1#2{\parshape 1 0.8cm 15.2cm \noindent #1\leaders\hbox{\
+.}\hfill\hbox to 2cm {\hfil #2}}
+
+\newcount\lnum
+\lnum 0
+\def\slit{\global\advance\lnum by 1[\the\lnum]}
+\def\slitm#1{\global\advance\lnum by -#1
+[\the\lnum]\global\advance\lnum by #1}
+\def\slitp#1{\global\advance\lnum by #1
+[\the\lnum]\global\advance\lnum by -#1}
+
+\npar 0
+\numq 0
+\input p5_1.tex
+\input p5_2.tex
+\input slit5_2.tex
+\input p5_3.tex
+
+\vfill\eject
+\input slit5.tex
+\bye
+

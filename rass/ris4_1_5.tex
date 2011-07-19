@@ -1,0 +1,86 @@
+\ifx\numpoint\undefined \catcode`\@=9 \else  \catcode`\@=14  \fi
+@  \global\newcount\numpoint  \global\numpoint=1
+\ifx\numpointo\undefined \catcode`\@=9 \else  \catcode`\@=14  \fi
+@  \global\newcount\numpointo  \global\numpointo=1
+\ifx\mydimx\undefined \catcode`\@=9 \else  \catcode`\@=14  \fi
+@  \newdimen\mydimx
+\ifx\mydimy\undefined \catcode`\@=9 \else  \catcode`\@=14  \fi
+@  \newdimen\mydimy
+\catcode`\@=12
+\def\emmoveto#1#2{\offinterlineskip \hbox to 0 true cm{\vbox to 0
+true cm{\multiply \mydimx by #1 \multiply \mydimy by #2
+\vskip -\mydimy \hskip\mydimx \special{em:point \the\numpoint}\vss}\hss}
+\numpointo=\numpoint \global\advance \numpoint by 1
+\ifnum\numpoint>32760 \global \numpoint 1 \fi
+}
+\def\emlineto#1#2{\offinterlineskip \hbox to 0 true cm{\vbox to 0
+true cm{\multiply \mydimx by #1 \multiply \mydimy by #2
+\vskip -\mydimy \hskip \mydimx  \special{em:point \the\numpoint}\vss}\hss}
+\special{em:line \the\numpointo,\the\numpoint}
+\numpointo=\numpoint  \global\advance \numpoint by 1
+\ifnum\numpoint>32760 \global \numpoint 1 \fi
+}
+\def\emshowto#1#2#3{\offinterlineskip \hbox to 0 true cm{\vbox to 0
+true cm{\multiply \mydimx by #1 \multiply \mydimy by #2
+\vskip - \mydimy \hskip \mydimx \vbox to 0 true cm{\vss\hbox{#3\hss
+}}\vss}\hss
+}}    
+
+%  -------- End of Header ------------ 
+
+\special{em:linewidth 0.8pt}  
+
+\mydimx=0.100000 true mm        \mydimy=0.100000 true mm 
+\vrule width 0 mm height 0 mm depth 57 true mm 
+
+{
+\parindent 0 mm
+
+\emmoveto{110}{280}
+\emlineto{660}{280}
+\emmoveto{340}{500}
+\emlineto{340}{280}
+\emmoveto{340}{280}
+\emlineto{110}{50}
+\emmoveto{240}{230}
+\emlineto{240}{160}
+\emmoveto{270}{230}
+\emlineto{270}{160}
+\emmoveto{240}{230}
+\emlineto{270}{230}
+\emmoveto{240}{160}
+\emlineto{270}{160}
+\emmoveto{240}{230}
+\emlineto{270}{160}
+\emmoveto{340}{130}
+\emlineto{190}{130}
+\emmoveto{190}{130}
+\emlineto{190}{230}
+\emmoveto{190}{230}
+\emlineto{180}{210}
+\emmoveto{190}{230}
+\emlineto{200}{210}
+\emmoveto{340}{130}
+\emlineto{320}{140}
+\emmoveto{340}{130}
+\emlineto{320}{120}
+\emmoveto{110}{50}
+\emlineto{130}{60}
+\emmoveto{110}{50}
+\emlineto{120}{70}
+\emmoveto{340}{500}
+\emlineto{350}{480}
+\emmoveto{340}{500}
+\emlineto{330}{480}
+\emmoveto{660}{280}
+\emlineto{640}{270}
+\emmoveto{660}{280}
+\emlineto{640}{290}
+\emshowto{50}{50}{$y$}
+\emshowto{370}{520}{$I^z$}
+\emshowto{360}{120}{$I_x^z$}
+\emshowto{120}{220}{$I_z^z$}
+\emshowto{640}{240}{$x$}
+
+}
+

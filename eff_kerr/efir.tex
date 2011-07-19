@@ -1,0 +1,76 @@
+\ifx\numpoint\undefined \catcode`\@=9 \else  \catcode`\@=14  \fi
+@  \global\newcount\numpoint  \global\numpoint=1
+\ifx\numpointo\undefined \catcode`\@=9 \else  \catcode`\@=14  \fi
+@  \global\newcount\numpointo  \global\numpointo=1
+\ifx\mydimx\undefined \catcode`\@=9 \else  \catcode`\@=14  \fi
+@  \newdimen\mydimx
+\ifx\mydimy\undefined \catcode`\@=9 \else  \catcode`\@=14  \fi
+@  \newdimen\mydimy
+\catcode`\@=12
+\def\emmoveto#1#2{\offinterlineskip \hbox to 0 true cm{\vbox to 0
+true cm{\multiply \mydimx by #1 \multiply \mydimy by #2
+\vskip -\mydimy \hskip\mydimx \special{em:point \the\numpoint}\vss}\hss}
+\numpointo=\numpoint \global\advance \numpoint by 1
+\ifnum\numpoint>32760 \global \numpoint 1 \fi
+}
+\def\emlineto#1#2{\offinterlineskip \hbox to 0 true cm{\vbox to 0
+true cm{\multiply \mydimx by #1 \multiply \mydimy by #2
+\vskip -\mydimy \hskip \mydimx  \special{em:point \the\numpoint}\vss}\hss}
+\special{em:line \the\numpointo,\the\numpoint}
+\numpointo=\numpoint  \global\advance \numpoint by 1
+\ifnum\numpoint>32760 \global \numpoint 1 \fi
+}
+\def\emshowto#1#2#3{\offinterlineskip \hbox to 0 true cm{\vbox to 0
+true cm{\multiply \mydimx by #1 \multiply \mydimy by #2
+\vskip - \mydimy \hskip \mydimx \vbox to 0 true cm{\vss\hbox{#3\hss
+}}\vss}\hss
+}}    
+
+%  -------- End of Header ------------ 
+
+\special{em:linewidth 0.8pt}  
+
+\mydimx=0.100000 true mm        \mydimy=0.100000 true mm 
+\vrule width 0 mm height 0 mm depth 35 true mm 
+
+{
+\parindent 0 mm
+\hsize 166 true mm
+
+\emmoveto{110}{90}
+\emlineto{290}{260}
+\emmoveto{290}{260}
+\emlineto{470}{90}
+\emmoveto{470}{90}
+\emlineto{670}{260}
+\emmoveto{670}{260}
+\emlineto{860}{90}
+\emmoveto{860}{90}
+\emlineto{1050}{260}
+\emmoveto{1050}{260}
+\emlineto{1070}{240}
+\emmoveto{1090}{220}
+\emlineto{1110}{200}
+\emmoveto{1130}{180}
+\emlineto{1150}{160}
+\emmoveto{1170}{140}
+\emlineto{1190}{120}
+\emmoveto{1210}{100}
+\emlineto{1220}{90}
+\emmoveto{1220}{90}
+\emlineto{1410}{260}
+\emmoveto{1410}{260}
+\emlineto{1600}{90}
+\emshowto{50}{50}{$\rm H_3C$}
+\emshowto{270}{300}{$\rm CH_2$}
+\emshowto{440}{50}{$\rm CH_2$}
+\emshowto{830}{50}{$\rm CH_2$}
+\emshowto{1190}{50}{$\rm CH_2$}
+\emshowto{1390}{300}{$\rm CH_2$}
+\emshowto{1610}{50}{$\rm CH_3$}
+\emshowto{650}{300}{$\rm CH_2$}
+\emshowto{1030}{300}{$\rm CH_2$}
+
+}
+
+   

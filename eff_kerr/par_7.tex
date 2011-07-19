@@ -1,0 +1,143 @@
+\prgaf{Релаксация эффекта Керра.}
+Мы видели, что релаксация диэлектрической поляризации в
+переменном поле зависит от молекулярных свойств жидкого
+диэлектрика. В теории Дебая показано, что процесс дизориентации
+молекулярных диполей происходит из-за вращательной диффузии.
+Время релаксации дипольной поляризации $\tau_{\cal D}={1\over
+2{\cal D}}$; ${\cal D}$ --- коэффициент вращательной
+диффузии\footnote{$^2$}{{\it М.Ф. Вукс} \лк Электрические и
+оптические свойства молекул\пк , стр. 65-68.}
+Явление Керра устанавливается через некоторое время после
+включения поля, после его выключения для двойного лучепреломления
+характрено некоторое время спада, время релаксации эффекта Керра
+--- $\tau_{\cal K}$. Под действием электрического поля молекулы
+ориентируются (с одновременным дезориентирующим действием
+теплового движения). Механизм дезориентации - {\it вращательная
+диффузия}. Напишем уравнение поступательной диффузии:
+$$J=-{\cal D}\hbox{grad} N+{\cal V}N \eqno (5.43) $$
+где ${\cal D}$ --- коэффициент поступательной
+диффузии;\par\noindent $N$ ---
+число частиц в единице объема с координатой $x$,\par\noindent ${\cal V}$
+--- средняя скорость движения под действием силы. ${\cal
+V}=qF=-q\hbox{grad}U$; $q$ --- подвижность молекулы, $U$ ---
+потенциальная энергия молекулы во внешнем поле.
+$$J=-{\cal D}\hbox{grad}N-qN\hbox{grad}U \eqno (5.44)$$\par
+Уравнение сохранения числа частиц:
+$${\partial J\over \partial x}+{\partial N\over \partial t}=0$$
+продифференцировав (5.44) и заменяя ${\partial J\over \partial x}$
+на $-{\partial N\over \partial t}$ получим:
+$${\partial N\over \partial t}=\hbox{div}({\cal
+D}\hbox{grad}N+qN\hbox{grad}U) \eqno (5.45)$$
+Это уравнение поступательной диффузии.\par
+Ограничимся рассмотрением молекул с аксиальной симметрией:
+$a_1\equiv a_{\parallel}$ вдоль оси
+симметрии;
+$a_{2}=a_3\equiv a_{\perp}$; дипольный момент направлен по оси
+симметрии.\par
+Ориентационная энергия в поле:
+$$U=U_1+U_2=-{E^2\over 2}(a_{\parallel}-a_{\perp})\cos^2\Theta
+-pE\cos\Theta$$
+$\Theta$ --- угол между $\vec p$ и $\vec E$. Перейдем от (5.45) к
+уравнению вращательной диффузии, произведя замену $N\rightarrow
+\Phi N$ (где $\Phi$ --- функция распределения молекул по углам
+ориентации).
+$${\partial\Phi\over \partial t}=\hbox{div}({\cal
+D}_r\hbox{grad}\Phi-q\Phi\hbox{grad}U) \eqno (5.46)$$
+${\cal D}_r$ --- коэффициент вращательной диффузии.
+\par В 1905 Эйнштейном было получен соотношение:
+$${\cal D}_r=qKT$$
+\par Если на частицы кроме градиента концентрации действует
+внешняя сила $F$, то $q$ --- подвижность частиц, т. е. $V=qF$.
+Величина, обратная $q$ называется коэффициентом трения
+$\xi={1\over q}$; Для обратных частиц, при поступательном
+движении $\xi=6\pi r_0 \eta$, где $\eta$ - вязкость.\par
+Для вращательного движения, если $\xi_r$ --- коэффициент
+вращательного трения:
+$$\xi_r=8\pi r_0^3\eta$$
+\par Формула Эйнштейна-Дебая-Стокса:
+$$\tau_{\cal D}={4\pi n_0^3\eta\over KT}\hskip 0.7 cm V\not
+=r_0^3$$
+Имеется ввиду Ван-дер-Ваальсовский радиус молекулы, граничные
+условия {\it slip} или {\it stick}, это приводит к эффективному объ\"ему
+$V$*.\par
+Преобразуем выражение (5.46):
+$${d\Phi\over dt}={\cal D}_r\hbox{div}\,\hbox{grad}\Phi+{{\cal
+D}_r\over KT}\Phi\hbox{div}\,\hbox{grad}U+{{\cal D}_r\over
+KT}\hbox{grad}\Phi\,\hbox{grad}U \eqno (5.47)$$
+В сферических координатах $\Phi=Phi(\Theta)$ и $U=U(\Theta)$:
+$$\hbox{div}\,\hbox{grad}\Phi\equiv
+{1\over\sin\Theta}\cdot{\partial\over\partial\Theta}\left(\sin\Theta{\partial
+\Phi\over\partial\Theta}\right)$$
+$${1\over {\cal D}_r}\cdot {\partial\Phi\over\partial
+t}={1\over\sin\Theta}\cdot
+{\partial\over\partial\Theta}\left(\sin\Theta
+{\partial\Phi\over\partial\Theta}\right)+{\Phi\over KT}\cdot
+{1\over\sin\Theta}\cdot
+{\partial\over\partial\Theta}\left(\sin\Theta{\partial
+U\over\partial\Theta}\right)+{1\over KT}\cdot
+{\partial\Phi\over\partial\Theta}{\partial U\over\partial\Theta}
+\eqno (5.48)$$
+\par Для неполярных жидкостей:
+$$U=-{E^2\over 2}(a_{\parallel}-a_{\perp})\cos^2\Theta \eqno
+(5.49)$$
+$$\Phi=Ae^{-{U\over KT}} \eqno (5.50)$$
+Так как $U<<KT$, разложим $\Phi$ в ряд:
+$$\Phi\simeq A\left[1+{E^2\over
+2KT}(a_{\parallel}-a_{\perp})\cos^2\Theta\right] \eqno (5.51)$$
+$$\int\Phi d\Omega=A\int e^{-{U\over KT}}d\Omega=1 \eqno (5.52)$$
+$${1\over A}=\int e^{-{U\over
+KT}}d\Omega=\int\limits_{0}^{\pi}\left[1+{E^2\over
+2KT}(a_{\parallel}-a_{\perp})\cos^2\Theta\right]2\pi\sin\Theta
+d\Theta$$
+$${1\over A}=4\pi\left[1+{E^2\over
+2KT}(a_{\parallel}-a_{\perp}){1\over3}\right]$$
+$$A={1\over4\pi}\cdot {1\over 1+{E^2\over
+2KT}(a_{\parallel}-a_{\perp}){1\over3}}={1\over
+4\pi}\left[1-{E^2\over
+2KT}(a_{\parallel}-a_{\perp}){1\over3}\right] \eqno (5.53)$$
+$$\Phi={1\over 4\pi}\left[1+{E^2\over
+2KT}(a_{\parallel}-a_{\perp})\left(\cos^2\Theta-{1\over3}\right)\right]
+\eqno (5.54)$$\par
+Такой вид имеет $\Phi$ в постоянном поле до момента его
+выключения ($t=0$). После выключения поля $\Phi$ начн\"ет
+убывать:
+$$\Phi={1\over 4\pi}\left[1+\Psi (t){E^2\over
+2KT}(a_{\parallel}-a_{\perp})\left(\cos^2\Theta-{1\over3}\right)\right]
+$$ где $\Psi(t)=e^{-{t\over\tau_k}}$ - закон убывания;
+$$\Phi={1\over 4\pi}\left[1+e^{-{t\over\tau_k}}{E^2\over
+2KT}(a_{\parallel}-a_{\perp})\left(\cos^2\Theta-{1\over3}\right)\right]
+\eqno (5.55)$$
+Подставим функцию распределения $\Phi$ в уравнение диффузии
+(5.48). В данный момент $t=0$ поле выключено, U=0:
+$${1\over{\cal
+D}_r}{\partial\Phi\over\sin\Theta}={1\over\sin\Theta}
+{\partial\over\partial\Theta}\left[\sin\Theta{\partial\Phi\over\partial\Theta}
+\right]={\cos\Theta\over\sin\Theta}{\partial\Phi\over\partial\Theta}+{\partial^2\Phi\over\partial\Theta^2}
+\eqno (5.56)$$
+$${\partial\Phi\over\partial
+t}=-{1\over\tau_k}e^{-{t\over\tau_k}}{E^2\over2KT}(a_{\parallel}-a_{\perp})\left(\cos^2\Theta-{1\over3}\right)$$
+$${\partial\Phi\over\partial
+\Theta}=-e^{-{t\over\tau_k}}{E^2\over2KT}(a_{\parallel}-a_{\perp})2\sin\Theta\cos\Theta$$
+$${\partial^2\Phi\over\partial
+\Theta^2}=-e^{-{t\over\tau_k}}{E^2\over2KT}(a_{\parallel}-a_{\perp})2\cos2\Theta$$
+\par подставим в (5.56):
+$${1\over {\cal
+D}_r\tau_k}\left(\cos^2\Theta-{1\over3}\right)=2\cos^2\Theta+2\cos2\Theta$$
+$${1\over {\cal
+D}_r\tau_k}\left(\cos^2\Theta-{1\over3}\right)=6\left(\cos^2\Theta-{1\over3}\right)
+\hskip 3 mm \Longrightarrow\hskip 3 mm {1\over {\cal
+D}_r\tau_k}=6$$
+$$\tau_k={1\over6{\cal D}_r} \eqno (5.57)$$
+\par так как $\tau_{\cal D}={1\over 2{\cal D}_r}$, то
+$$\tau_{k}={1\over3}\tau_{\cal D} \eqno (5.58)$$\par
+Это можно перенести и на случай полярных жидкостей, но в этом
+случае, кроме релаксации эффекта Керра будет наблюдаться и
+релаксация дипольной поляризации. Для времени релаксации эффекта
+Керра не имеет значения, обладает ли молекула дипольным моментом.
+Наличие значительной проводимости в жидкости при сильных
+постоянных полях ($10^5\rm\ {вольт\over см}$) затрудняет изучение
+эффекта Керра. Сильные поля вызывают нагревание жидкости, ---
+появляются сильные конвекционные потоки и неоднородности,
+искажающие световое поле (пространственный заряд, двойной
+электрический слой на границе жидкость-металл). Альтернативой
+могут служить импульсные методы, слабые переменные поля.

@@ -1,0 +1,70 @@
+\lnum 0
+\def\eqnpl#1{(I.#1)}
+\def\noqpl{\global\advance\numq by 1\eqno(I.\the\numq)}
+\vfil
+\eject
+\noindent{\glv Приложение I}
+\vskip 3mm
+\noindent{\prgf Нахождение флуктуаций некоторых термодинамических величин}
+\vskip 2mm
+Пусть физическая величина $x$ может отклоняться от своего
+среднего значения $\overline{x}$ на величину
+$x-\overline{x}=\Delta x$, где $\Delta x$ есть флуктуация $x$.
+Пусть вероятность найти значение $\Delta x$, заключенное в
+интервале $d(\Delta x)$, задается распределением Гаусса:
+$$W(\Delta x)d(\Delta x)=\hbox{const}\cdot\exp\left\{-{(\Delta
+x)^2\over2\overline{|\Delta x|^2}}\right\}d(\Delta x),\noqpl$$
+где $\overline{|x|^2}$ --- средний квадрат флуктуации физической
+величины. С другой стороны, вероятность отклонения
+термодинамической величины $x$ от ее равновесного значения $x_0$,
+определяется принципом Больцмана:
+$$W(\Delta x)d(\Delta x)=\hbox{const}\cdot\exp\left\{-{\Delta\Psi
+\over kT}\right\}d(\Delta x),\noqpl$$
+где $\Delta\Psi$ может быть в
+разных случаях изменением свободной энергии, энтальпии,
+термодинамического или химического потенциалов.
+
+Минимальная работа $A_{\rm min}$, необходимая, чтобы обратным
+образом осуществить отклонение термодинамической величины от ее
+начального значения $A_{\rm min}\equiv\Delta\Psi=\Delta E-T\Delta
+S+p\Delta V$.
+
+Если рассматривать небольшие изменения $\Delta\Psi$, которые как
+раз и описывают флуктуации, то обычно $\Delta\Psi$ можно
+разложить в ряд Тейлора по любым двум термодинамическим
+переменным и ограничиться квадратичными членами ряда.
+
+Пусть $\Delta\Psi$ есть функция двух независимых переменных,
+например энтропии $S$ и давления $p$, тогда
+$$\eqalign{
+&\Delta\Psi(S,p)=\left({\partial E\over\partial
+S}\right)_p\Delta S+\left({\partial E\over\partial
+p}\right)_S\Delta p+{1\over2}\left\{\left({\partial^2 E\over\partial
+S^2}\right)_p(\Delta S)^2+\right.\cr
+&\left.+\left({\partial^2 E\over\partial
+p^2}\right)_S(\Delta p)^2+2{\partial^2E\over\partial S\partial
+p}(\Delta p\Delta S)\right\}-T\Delta S+p\left({\partial V\over\partial
+p}\right)_S\Delta p+p\left({\partial V\over\partial
+S}\right)_p\Delta S,\cr
+}\noq$$
+где призводные взяты при равновесных значениях величин $p$ и $S$.
+Сумма коэффициентов при $\Delta S$, а также сумма коэффициентов
+при $\Delta p$ равны нулю. Поэтому
+$$\eqalign{
+\Delta\Psi(\S,p)={1\over2}\left\{\left({\partial^2 E\over\partial
+S^2}\right)_p(\Delta S)^2+\right.&\left.\left({\partial^2 E\over\partial
+p^2}\right)_S(\Delta p)^2+2{\partial^2 E\over\partial S\partial
+p}\Delta S\Delta p\right\}=\cr
+&={1\over2}\left[\Delta p\Delta\left({\partial E\over\partial
+p}\right)_S+\Delta S\Delta\left({\partial E\over\partial
+S}\right)_p\right].\cr
+}\noq$$
+Учитывая, что
+$$\left.\matrix{\left({\partial E\over\partial
+p}\right)_S=-p\left({\partial V\over\partial
+p}\right)_S,\ \left({\partial E\over\partial
+S}\right)_p=T-p\left({\partial V\over\partial S}\right)_p,\cr
+\left({\partial V\over\partial
+S}\right)_p=\left({\partial T\over\partial
+p}\right)_S,\ \Delta T=\cr
+}\right\}$$

@@ -1,0 +1,91 @@
+\ifx\numpoint\undefined \catcode`\@=9 \else  \catcode`\@=14  \fi
+@  \global\newcount\numpoint  \global\numpoint=1
+\ifx\numpointo\undefined \catcode`\@=9 \else  \catcode`\@=14  \fi
+@  \global\newcount\numpointo  \global\numpointo=1
+\ifx\mydimx\undefined \catcode`\@=9 \else  \catcode`\@=14  \fi
+@  \newdimen\mydimx
+\ifx\mydimy\undefined \catcode`\@=9 \else  \catcode`\@=14  \fi
+@  \newdimen\mydimy
+\catcode`\@=12
+\def\emmoveto#1#2{\offinterlineskip \hbox to 0 true cm{\vbox to 0
+true cm{\multiply \mydimx by #1 \multiply \mydimy by #2
+\vskip -\mydimy \hskip\mydimx \special{em:point \the\numpoint}\vss}\hss}
+\numpointo=\numpoint \global\advance \numpoint by 1
+\ifnum\numpoint>32760 \global \numpoint 1 \fi
+}
+\def\emlineto#1#2{\offinterlineskip \hbox to 0 true cm{\vbox to 0
+true cm{\multiply \mydimx by #1 \multiply \mydimy by #2
+\vskip -\mydimy \hskip \mydimx  \special{em:point \the\numpoint}\vss}\hss}
+\special{em:line \the\numpointo,\the\numpoint}
+\numpointo=\numpoint  \global\advance \numpoint by 1
+\ifnum\numpoint>32760 \global \numpoint 1 \fi
+}
+\def\emshowto#1#2#3{\offinterlineskip \hbox to 0 true cm{\vbox to 0
+true cm{\multiply \mydimx by #1 \multiply \mydimy by #2
+\vskip - \mydimy \hskip \mydimx \vbox to 0 true cm{\vss\hbox{#3\hss
+}}\vss}\hss
+}}    
+
+%  -------- End of Header ------------ 
+
+\special{em:linewidth 0.8pt}  
+
+\mydimx=0.100000 true mm        \mydimy=0.100000 true mm 
+\vrule width 0 mm height 0 mm depth 29 true mm 
+
+{
+\parindent 0 mm
+
+\emmoveto{80}{190}
+\emlineto{120}{190}
+\emmoveto{120}{210}
+\emlineto{90}{240}
+\emmoveto{120}{170}
+\emlineto{90}{140}
+\emmoveto{170}{190}
+\emlineto{210}{190}
+\emmoveto{300}{230}
+\emlineto{270}{200}
+\emmoveto{270}{210}
+\emlineto{290}{230}
+\emmoveto{270}{180}
+\emlineto{300}{150}
+\emmoveto{350}{140}
+\emlineto{390}{140}
+\emmoveto{580}{190}
+\emlineto{610}{190}
+\emmoveto{610}{210}
+\emlineto{580}{240}
+\emmoveto{610}{170}
+\emlineto{580}{140}
+\emmoveto{660}{190}
+\emlineto{700}{190}
+\emmoveto{760}{200}
+\emlineto{790}{230}
+\emmoveto{760}{210}
+\emlineto{780}{230}
+\emmoveto{760}{180}
+\emlineto{790}{150}
+\emmoveto{840}{140}
+\emlineto{880}{140}
+\emshowto{50}{240}{H}
+\emshowto{50}{180}{H}
+\emshowto{50}{120}{H}
+\emshowto{130}{180}{C}
+\emshowto{230}{180}{C}
+\emshowto{300}{230}{O}
+\emshowto{310}{130}{O}
+\emshowto{400}{130}{H}
+\emshowto{540}{240}{Cl}
+\emshowto{540}{180}{Cl}
+\emshowto{540}{120}{Cl}
+\emshowto{620}{180}{C}
+\emshowto{720}{180}{C}
+\emshowto{790}{230}{O}
+\emshowto{800}{130}{O}
+\emshowto{890}{130}{H}
+\emshowto{50}{50}{уксусная кислота}
+\emshowto{540}{50}{трихлоруксусная кислота}
+
+}
+
