@@ -1,10 +1,15 @@
 \documentclass[10pt,twoside]{article}
 \usepackage[a5paper]{geometry}
 
+\newsavebox{\myhbar}
+\savebox{\myhbar}{$\hbar$}
+
 % XeTeX packages
 \usepackage[cm-default,no-math]{fontspec} 
 \usepackage{xunicode} % some extra unicode support
 \usepackage{xltxtra} % \XeLaTeX macro
+
+\renewcommand*{\hbar}{\mathalpha{\usebox{\myhbar}}}
 
 \tolerance=1000
 \emergencystretch=0.74cm
@@ -50,13 +55,35 @@ xetex]{hyperref}
 \input pMacro.tex
 
 \pagestyle{myheadings}
-\input titul.tex
+%\input titul.tex
+\pageno5
+
+\input predislovie.tex
+
 \input glv01.tex
+
+%\pageno37
 \input glv02.tex
+
+%\pageno64
 \zagn 2\input glv03.tex
+
+%\pageno90
 \zagn3\input glv04.tex
-\zagn4\zagpn4\input glv_flygare.tex
-\zagn4\zagpn4\input flygare_exp.tex
-\zagn5\input glv05.tex
+
+%\pageno156
+\zagn4\zagpn3\input glv_flygare.tex
+
+%\pageno217
+\zagn4\zagpn3\input flygare_exp.tex
+
+%\pageno222
+\zagn4\input glv05.tex
 \input glv05_slit.tex
+
+%\pageno247
+\zagn5\input glv06_eff_kerr.tex
+
+\input soder.tex
+
 \end{document}

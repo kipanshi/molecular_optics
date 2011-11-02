@@ -37,7 +37,7 @@
 \noindent{\Large ГЛАВА \the\zagn.}\vskip 3mm 
 \noindent{\zagf #1}
 \vskip 1cm
-\nglav 0\global\advance\nglav by 1 
+%\nglav 0\global\advance\nglav by 1 
 \numq 0
 \markboth{\hfill\small #1\hfill}{}
 }
@@ -47,7 +47,7 @@
 \noindent{\Large \the\zagn.\the\zagpn. #1} 
 \vskip 1cm
 \nglav 0\global\advance\nglav by 1 
-\numq 1
+\numq 0
 \markboth{\hfill\small #1\hfill}{}
 }
 
@@ -58,6 +58,14 @@
 4mm 
 \markright{\hfill\small #1\hfill}
 }
+
+\def\subzagp#1{\global\advance\subzagn by 1\vskip 7mm
+\noindent\hangindent 10mm\hangafter 1\hbox to 10mm 
+{\szagf\S\ \the\subzagn.\hfill}\hskip 0mm {\szagf #1 }\vskip
+4mm 
+}
+
+
 \def\subzagl#1{\global\advance\subzagn by 1\vskip 7mm
 \noindent\hangindent 10mm\hangafter 1\hbox to 10mm 
 {\szagf\S\ \the\subzagn.\hfill}\hskip 0mm {\szagf #1 }\vskip
@@ -69,5 +77,5 @@
 {\szagf\the\zagn.\the\subzagn.\the\ssubzagn.\hfill}\hskip 0mm
 {\szagf #1 }\vskip 1mm }
 
-\def\risp#1#2{\centerline{{\small\bfseries Рис.\ \the\nglav.#1 .}\ {\small #2}}}
-\def\tabp#1#2{\noindent{\small\bfseries Таблица\ \the\nglav.#1 .}\ {\small #2}}
+\def\risp#1#2{\centerline{{\small\bfseries Рис.\ \the\zagn.#1 .}\ {\small #2}}}
+\def\tabp#1#2{\noindent{\small\bfseries Таблица\ \the\zagn.#1 .}\ {\small #2}}

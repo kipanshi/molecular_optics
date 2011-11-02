@@ -14,8 +14,8 @@
 \def\tzzeta{$\cos\vartheta$}
 \def\tzxi{$-\sin\vartheta\cos\psi$}
 \def\tznu{$\sin\vartheta\sin\psi$}
-\def\eqn#1{(\the\nglav.#1)}
-\def\noq{\global\advance\numq by 1\eqno(\the\nglav.\the\numq)}
+\def\eqn#1{(\the\zagn.#1)}
+\def\noq{\global\advance\numq by 1\eqno(\the\zagn.\the\numq)}
 \def\exp{{\rm exp}}
 \def\rot{{\rm rot}}
 \def\diverg{{\rm div}}
@@ -24,15 +24,20 @@
 \hfil{\prgf\par\noindent\the\nglav.\the\npar .
 #1 }\hfill}
 \def\glava#1{\global\advance\nglav by
-1\vfil\eject\noindent{\glv ƒ« ¢ \
+1\vfil\eject\noindent{\glv Ð“Ð»Ð°Ð²Ð°\
 \the\nglav.\ #1}\hfill}
 \def\angst{\hbox{\hbox{A}\hskip -2,08 mm \raise 1,5 mm\hbox{$^\circ$}}}
-\def\sodp#1#2{\parshape 2 0.8cm 13.2cm 1.6cm 14.4cm\noindent #1\leaders\hbox{\
-.}\hfill\hbox to 2cm {\hfil #2}}
-\def\sodg#1#2{\parshape 1 0cm 16cm \noindent #1\leaders\hbox{\
-.}\hfill\hbox to 2cm {\hfil #2}}
-\def\sods#1#2{\parshape 1 0.8cm 15.2cm \noindent #1\leaders\hbox{\
-.}\hfill\hbox to 2cm {\hfil #2}}
+
+% Soder
+\def\sodp#1#2{\parshape 2 0.8cm 10cm 1.6cm 11cm\noindent #1\leaders\hbox{\
+.}\hfill\hbox to 2cm {\hfil #2}
+\vskip5mm}
+
+\def\sodg#1#2{\parshape 1 0cm 10.8cm \noindent {\bf #1}\leaders\hbox{\
+.}\hfill\hbox to 1cm {\hfil {\bf #2}}\vskip3mm}
+
+\def\sods#1#2{\parshape 1 0.8cm 10cm \noindent {\bf #1}\leaders\hbox{\
+.}\hfill\hbox to 1cm {\hfil {\bf #2}}\vskip3mm}
 
 \def\inkdu{\vbox{\hbox{$-$}\vskip
 -5.2mm\hbox{$-$}\vskip -2.7mm\hbox{$|$}}}

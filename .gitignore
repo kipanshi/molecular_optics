@@ -6,3 +6,8 @@
 *.swp
 .project
 .texlipse
+
+*.jpg
+*.zip
+*.psd
+*.png
